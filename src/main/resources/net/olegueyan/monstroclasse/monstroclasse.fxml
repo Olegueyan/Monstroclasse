@@ -1,0 +1,421 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="paneContainer" fx:id="paneContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" stylesheets="@css/Monstroclasse.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.olegueyan.monstroclasse.portal.MonstroclasseController">
+   <children>
+      <ImageView id="appBanner" fx:id="appBanner" fitHeight="88.0" fitWidth="589.0" layoutX="345.5" layoutY="14.0" pickOnBounds="true">
+         <image>
+            <Image url="@assets/monstroclasseBanner.png" />
+         </image>
+      </ImageView>
+      <Pane id="paneHome" fx:id="paneHome" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Button id="closeBtnHome" fx:id="closeBtnHome" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#closeBtnClick" prefHeight="70.0" prefWidth="70.0" snapToPixel="false">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <graphic>
+                  <ImageView id="closeBtnImage" fx:id="closeBtnImage" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@assets/close.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                     </cursor>
+                     <viewport>
+                        <Rectangle2D />
+                     </viewport>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Pane id="corePaneHome" fx:id="corePaneHome" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="1280.0">
+               <children>
+                  <Pane id="subPaneHome" fx:id="subPaneHome" layoutX="199.0" layoutY="14.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="588.0" prefWidth="882.0">
+                     <children>
+                        <Pane id="studentGridPane" fx:id="studentGridPane" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="568.0" prefWidth="862.0" />
+                     </children>
+                  </Pane>
+                  <Button id="adminBtn" fx:id="adminBtn" focusTraversable="false" layoutX="1155.0" layoutY="491.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#adminBtnClick" prefHeight="110.0" prefWidth="110.0">
+                     <graphic>
+                        <ImageView id="adminBtnImage" fx:id="adminBtnImage" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@assets/admin.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane id="paneAdminConnexion" fx:id="paneAdminConnexion" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane id="corePaneAdminConnexion" fx:id="corePaneAdminConnexion" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="1280.0">
+               <children>
+                  <Pane id="subPaneAdminConnexion" fx:id="subPaneAdminConnexion" layoutX="294.4" layoutY="63.2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.6" prefWidth="691.2">
+                     <children>
+                        <ImageView id="adminConnexionImage" fx:id="adminConnexionImage" fitHeight="210.0" fitWidth="210.0" layoutX="240.6" layoutY="10.0" pickOnBounds="true">
+                           <image>
+                              <Image url="@assets/admin.png" />
+                           </image>
+                        </ImageView>
+                        <Label id="labelPasswordEntryAdminConnexion" fx:id="labelPasswordEntryAdminConnexion" layoutX="168.6" layoutY="245.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="63.0" prefWidth="354.0" style="-fx-alignment: center;" text="Mot de passe" textAlignment="CENTER">
+                           <font>
+                              <Font name="Verdana Bold" size="48.0" />
+                           </font>
+                        </Label>
+                        <PasswordField id="fieldPasswordAdminConnexion" fx:id="fieldPasswordAdminConnexion" layoutX="121.6" layoutY="340.0" onKeyPressed="#fieldPasswordAdminConnexionKeyPressed" prefHeight="56.0" prefWidth="448.0">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </PasswordField>
+                        <Label id="labelAdminConnexionWrongPassword" fx:id="labelAdminConnexionWrongPassword" layoutX="214.6" layoutY="450.6" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="29.0" prefWidth="262.0" text="Mot de passe incorrect" textFill="RED" visible="false">
+                           <font>
+                              <Font name="Verdana Italic" size="23.0" />
+                           </font>
+                        </Label>
+                        <Button id="backBtnAdminConnexion" fx:id="backBtnAdminConnexion" focusTraversable="false" layoutX="10.0" layoutY="419.6" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#backBtnAdminConnexionClick" prefHeight="60.0" prefWidth="60.0" snapToPixel="false">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <ImageView id="backBtnAdminConnexionImage" fx:id="backBtnAdminConnexionImage" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/close.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button id="validateBtnAdminConnexion" fx:id="validateBtnAdminConnexion" focusTraversable="false" layoutX="621.2" layoutY="419.6" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#validateBtnAdminConnexionClick" prefHeight="60.0" prefWidth="60.0" snapToPixel="false">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <graphic>
+                              <ImageView id="validateBtnAdminConnexionImage" fx:id="validateBtnAdminConnexionImage" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/check.png" />
+                                 </image>
+                                 <cursor>
+                                    <Cursor fx:constant="DEFAULT" />
+                                 </cursor>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children></Pane>
+      <Pane id="paneAccountAdmin" fx:id="paneAccountAdmin" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView id="adminAccountCurrentImage" fx:id="adminAccountCurrentImage" fitHeight="92.0" fitWidth="92.0" layoutX="5.0" layoutY="5.0" pickOnBounds="true" />
+            <Label id="adminAccountCurrentNameAccountAdmin" fx:id="adminAccountCurrentNameAccountAdmin" layoutX="102.0" layoutY="70.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="240.0">
+               <font>
+                  <Font name="Verdana Bold" size="21.0" />
+               </font>
+            </Label>
+            <Pane id="corePaneAccountAdmin" fx:id="corePaneAccountAdmin" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="1280.0">
+               <children>
+                  <Button id="backBtnAccountAdmin" fx:id="backBtnAccountAdmin" focusTraversable="false" layoutX="15.0" layoutY="531.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#backBtnAccountAdminClick" prefHeight="70.0" prefWidth="70.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView id="backBtnAccountAdminImage" fx:id="backBtnAccountAdminImage" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/leftArrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Pane id="subPaneAccountAdmin" fx:id="subPaneAccountAdmin" layoutX="160.0" layoutY="74.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="960.0">
+                     <children>
+                        <Pane id="moduleAccessAdmin" fx:id="moduleAccessAdmin" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="448.0" prefWidth="940.0" />
+                     </children>
+                  </Pane>
+                  <Button id="dataBtnAccountAdmin" fx:id="dataBtnAccountAdmin" focusTraversable="false" layoutX="1195.0" layoutY="531.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#dataBtnAccountAdminClick" prefHeight="70.0" prefWidth="70.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView id="dataBtnAccountAdminImage" fx:id="dataBtnAccountAdminImage" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/import_export.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Label id="importExportLabelAccountAdmin" fx:id="importExportLabelAccountAdmin" layoutX="980.0" layoutY="571.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="200.0" text="Import / Export">
+                     <font>
+                        <Font name="Verdana Bold" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children></Pane>
+      <Pane id="paneAccountStudent" fx:id="paneAccountStudent" prefHeight="200.0" prefWidth="200.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView id="studentAccountCurrentImage" fx:id="studentAccountCurrentImage" fitHeight="92.0" fitWidth="92.0" layoutX="5.0" layoutY="5.0" pickOnBounds="true" />
+            <Label id="studentAccountCurrentNameAccountStudent" fx:id="studentAccountCurrentNameAccountStudent" layoutX="102.0" layoutY="70.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="240.0">
+               <font>
+                  <Font name="Verdana Bold" size="21.0" />
+               </font>
+            </Label>
+            <Pane id="corePaneAccountStudent" fx:id="corePaneAccountStudent" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="1280.0">
+               <children>
+                  <Button id="backBtnAccountStudent" fx:id="backBtnAccountStudent" focusTraversable="false" layoutX="15.0" layoutY="531.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#backBtnAccountStudentClick" prefHeight="70.0" prefWidth="70.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView id="backBtnAccountStudentImage" fx:id="backBtnAccountStudentImage" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/leftArrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Pane id="subPaneAccountStudent" fx:id="subPaneAccountStudent" layoutX="160.0" layoutY="74.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="960.0">
+                     <children>
+                        <Pane id="moduleAccessStudent" fx:id="moduleAccessStudent" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="448.0" prefWidth="940.0" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children></Pane>
+      <Pane id="paneCloseConfirm" fx:id="paneCloseConfirm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane id="corePaneCloseConfirm" fx:id="corePaneCloseConfirm" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="1280.0">
+               <children>
+                  <Pane id="subPaneCloseConfirm" fx:id="subPaneCloseConfirm" layoutX="371.0" layoutY="156.8" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="302.4" prefWidth="538.0">
+                     <children>
+                        <Button id="checkCloseConfirmBtn" fx:id="checkCloseConfirmBtn" focusTraversable="false" layoutX="464.0" layoutY="228.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#checkCloseConfirmBtnClick" prefHeight="60.0" prefWidth="60.0">
+                           <graphic>
+                              <ImageView id="checkCloseConfirmBtnImage" fx:id="checkCloseConfirmBtnImage" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/check.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button id="undoCloseConfirmBtn" fx:id="undoCloseConfirmBtn" focusTraversable="false" layoutX="14.0" layoutY="228.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#undoCloseConfirmBtnClick" prefHeight="60.0" prefWidth="60.0">
+                           <graphic>
+                              <ImageView id="undoCloseConfirmBtnImage" fx:id="undoCloseConfirmBtnImage" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/close.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <ImageView id="appIconCloseConfirmImage" fx:id="appIconCloseConfirmImage" fitHeight="150.0" fitWidth="200.0" layoutX="180.0" layoutY="108.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/monstroclasse.png" />
+                           </image>
+                        </ImageView>
+                        <Label id="labelCloseConfirm" fx:id="labelCloseConfirm" contentDisplay="CENTER" focusTraversable="false" layoutX="98.0" layoutY="22.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="342.0" style="-fx-alignment: center;" text="Quitter l'application" textAlignment="CENTER">
+                           <font>
+                              <Font name="Verdana Bold" size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane id="paneAccountStudentConfirm" fx:id="paneAccountStudentConfirm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane id="corePaneAccountStudentConfirm" fx:id="corePaneAccountStudentConfirm" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="1280.0">
+               <children>
+                  <Pane id="subPaneAccountStudentConfirm" fx:id="subPaneAccountStudentConfirm" layoutX="371.2" layoutY="74.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="537.6">
+                     <children>
+                        <Button id="undoAccountStudentConfirmBtn" fx:id="undoAccountStudentConfirmBtn" focusTraversable="false" layoutX="10.0" layoutY="398.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#undoAccountStudentConfirmBtnClick" prefHeight="60.0" prefWidth="60.0">
+                           <graphic>
+                              <ImageView id="undoAccountStudentConfirmBtnImage" fx:id="undoAccountStudentConfirmBtnImage" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/close.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button id="checkAccountStudentConfirmBtn" fx:id="checkAccountStudentConfirmBtn" focusTraversable="false" layoutX="467.6" layoutY="398.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#checkAccountStudentConfirmBtnClick" prefHeight="60.0" prefWidth="60.0">
+                           <graphic>
+                              <ImageView id="checkAccountStudentConfirmBtnImage" fx:id="checkAccountStudentConfirmBtnImage" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@assets/check.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <ImageView id="studentAccountConfirmImage" fx:id="studentAccountConfirmImage" fitHeight="310.0" fitWidth="310.0" layoutX="116.0" layoutY="10.0" pickOnBounds="true" />
+                        <Label id="accountStudentConfirmLabel" fx:id="accountStudentConfirmLabel" contentDisplay="CENTER" focusTraversable="false" layoutX="100.0" layoutY="348.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="342.0" style="-fx-alignment: center;" text="Student Name" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true">
+                           <font>
+                              <Font name="Verdana" size="30.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane id="paneDataExportImport" fx:id="paneDataExportImport" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView id="dataExportImportAdminCurrentImage" fx:id="dataExportImportAdminCurrentImage" fitHeight="92.0" fitWidth="92.0" layoutX="5.0" layoutY="5.0" pickOnBounds="true" />
+            <Label id="adminAccountCurrentNameDataExportImport" fx:id="adminAccountCurrentNameDataExportImport" layoutX="102.0" layoutY="70.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="240.0">
+               <font>
+                  <Font name="Verdana Bold" size="21.0" />
+               </font>
+            </Label>
+            <Pane id="corePaneDataExportImport" fx:id="corePaneDataExportImport" layoutY="104.0" prefHeight="616.0" prefWidth="1280.0">
+               <children>
+                  <Pane id="internalPaneDataExportImport" fx:id="internalPaneDataExportImport" layoutX="160.0" layoutY="44.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="960.0">
+                     <children>
+                        <Pane id="titlePaneDataExportImport" fx:id="titlePaneDataExportImport" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="960.0">
+                           <children>
+                              <Label id="titleLabelDataExportImport" fx:id="titleLabelDataExportImport" layoutX="93.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="774.0" text="Importation / Exportation des données">
+                                 <font>
+                                    <Font name="Verdana Bold" size="35.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane id="subPaneDataExportImport" fx:id="subPaneDataExportImport" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="960.0">
+                           <children>
+                              <Pane id="layoutPaneDataExportImport" fx:id="layoutPaneDataExportImport" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="448.0" prefWidth="940.0">
+                                 <children>
+                                    <Pane id="internalPaneIndicatorDataExportImport" fx:id="internalPaneIndicatorDataExportImport" prefHeight="94.0" prefWidth="940.0">
+                                       <children>
+                                          <Button id="uncheckAllBtnDataExportImport" fx:id="uncheckAllBtnDataExportImport" focusTraversable="false" layoutX="14.0" layoutY="17.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#uncheckAllBtnDataExportImportClick" prefHeight="60.0" prefWidth="60.0">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <graphic>
+                                                <ImageView id="uncheckAllBtnDataExportImportImage" fx:id="uncheckAllBtnDataExportImportImage" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@assets/close.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Label id="labelUncheckDataExportImport" fx:id="labelUncheckDataExportImport" focusTraversable="false" layoutX="83.0" layoutY="28.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="240.0" style="-fx-alignment: center;" text="Tout décocher">
+                                             <font>
+                                                <Font name="Verdana Bold" size="30.0" />
+                                             </font>
+                                          </Label>
+                                          <Button id="checkAllBtnDataExportImport" fx:id="checkAllBtnDataExportImport" focusTraversable="false" layoutX="866.0" layoutY="17.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#checkAllBtnDataExportImportClick" prefHeight="60.0" prefWidth="60.0">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <graphic>
+                                                <ImageView id="checkAllBtnDataExportImportImage" fx:id="checkAllBtnDataExportImportImage" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@assets/check.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Label id="labelCheckDataExportImport" fx:id="labelCheckDataExportImport" focusTraversable="false" layoutX="650.0" layoutY="28.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="199.0" style="-fx-alignment: center;" text="Tout cocher">
+                                             <font>
+                                                <Font name="Verdana Bold" size="30.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                    <Pane id="internalPaneScrollDataExportImport" fx:id="internalPaneScrollDataExportImport" layoutY="94.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="354.0" prefWidth="940.0" />
+                                    <Pane id="internalPaneWarningUsage" fx:id="internalPaneWarningUsage" layoutY="94.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="354.0" prefWidth="940.0">
+                                       <children>
+                                          <Label id="warningMessageLabel" fx:id="warningMessageLabel" layoutX="50.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="254.0" prefWidth="840.0" text="Attention ! Il n’est pas possible d’importer un utilisateur, un mot, un exercice ou une séance qui porte le même nom qu’un objet déjà existant. Ceci afin de ne pas perdre les exercices existants et l’avancée des élèves.Si vous souhaitez importer un objet déjà existant, il vous faut d’abord le supprimer manuellement dans l’application avant de faire l’import.Une fois l’import terminé, nous vous conseillons de vérifier les attributions de séances." textAlignment="JUSTIFY" textFill="#a61414" wrapText="true">
+                                             <font>
+                                                <Font name="Verdana" size="24.0" />
+                                             </font>
+                                          </Label>
+                                          <Button id="warningContinueButton" fx:id="warningContinueButton" layoutX="720.0" layoutY="280.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#warningContinueButtonClick" prefHeight="61.0" prefWidth="200.0" text="Continuer">
+                                             <font>
+                                                <Font name="Verdana" size="32.0" />
+                                             </font>
+                                          </Button>
+                                       </children>
+                                    </Pane>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Button id="backBtnDataExportImport" fx:id="backBtnDataExportImport" focusTraversable="false" layoutX="15.0" layoutY="531.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#backBtnDataExportImportClick" prefHeight="70.0" prefWidth="70.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView id="backBtnDataExportImportImage" fx:id="backBtnDataExportImportImage" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/leftArrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button id="importBtnDataExportImport" fx:id="importBtnDataExportImport" focusTraversable="false" layoutX="1195.0" layoutY="451.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#importBtnDataExportImportClick" prefHeight="70.0" prefWidth="70.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView id="importBtnDataExportImportImage" fx:id="importBtnDataExportImportImage" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/import.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button id="exportBtnDataExportImport" fx:id="exportBtnDataExportImport" focusTraversable="false" layoutX="1195.0" layoutY="531.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#exportBtnDataExportImportClick" prefHeight="70.0" prefWidth="70.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView id="exportBtnDataExportImportImage" fx:id="exportBtnDataExportImportImage" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@assets/export.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

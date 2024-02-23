@@ -1,0 +1,470 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="paneContainer" fx:id="paneContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.olegueyan.monstroclasse.module.content.AdminModStudentManagerController">
+   <children>
+      <ImageView id="appBanner" fx:id="appBanner" fitHeight="88.0" fitWidth="589.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../assets/monstroclasseBanner.png" />
+         </image>
+      </ImageView>
+      <ImageView id="currentAccountImage" fx:id="currentAccountImage" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+      <Pane id="paneHome" fx:id="paneHome" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane id="corePaneHome" fx:id="corePaneHome" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="1280.0">
+               <children>
+                  <Button id="closeModuleBtnHome" fx:id="closeModuleBtnHome" focusTraversable="false" layoutX="14.0" layoutY="532.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#closeModuleBtnHomeClick" prefHeight="70.0" prefWidth="70.0">
+                     <graphic>
+                        <ImageView id="closeModuleBtnHomeImage" fx:id="closeModuleBtnHomeImage" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <image>
+                              <Image url="@../../assets/leftArrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="moduleAccessBtnHome" fx:id="moduleAccessBtnHome" focusTraversable="false" layoutX="1196.0" layoutY="532.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#moduleAccessBtnHomeClick" prefHeight="70.0" prefWidth="70.0">
+                     <graphic>
+                        <ImageView id="moduleAccessBtnHomeImage" fx:id="moduleAccessBtnHomeImage" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <image>
+                              <Image url="@../../assets/moduleAccess.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Pane id="subPaneHome" fx:id="subPaneHome" layoutX="288.0" layoutY="27.2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="561.6" prefWidth="704.0">
+                     <children>
+                        <Pane id="internalPaneOneOfHome" fx:id="internalPaneOneOfHome" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="84.24" prefWidth="704.0">
+                           <children>
+                              <Label id="addProfileHomeLabel" fx:id="addProfileHomeLabel" focusTraversable="false" layoutX="194.0" layoutY="20.62" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="43.0" prefWidth="316.0" text="Ajouter un profil" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Verdana Bold" size="34.0" />
+                                 </font>
+                              </Label>
+                              <Button id="addProfilBtnHome" fx:id="addProfileBtnHome" focusTraversable="false" layoutX="634.0" layoutY="12.12" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addProfileBtnHomeClick" prefHeight="60.0" prefWidth="60.0">
+                                 <graphic>
+                                    <ImageView id="addProfileBtnHomeImage" fx:id="addProfileBtnHomeImage" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true">
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <image>
+                                          <Image url="@../../assets/add.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane id="internalPaneScrollAccounts" fx:id="internalPaneScrollAccounts" layoutY="84.24" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="477.36" prefWidth="704.0" />
+                     </children>
+                  </Pane>
+                  <Label id="moduleAttributionLabelHome" fx:id="moduleAttributionLabelHome" alignment="CENTER" layoutX="1020.0" layoutY="545.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="56.0" prefWidth="159.0" text="Attributions des modules" textAlignment="CENTER" wrapText="true">
+                     <font>
+                        <Font name="Verdana Bold" size="22.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane id="paneAddProfile" fx:id="paneAddProfile" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane id="corePaneAddProfile" fx:id="corePaneAddProfile" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="1280.0">
+               <children>
+                  <Pane id="subPaneAddProfile" fx:id="subPaneAddProfile" layoutX="384.0" layoutY="56.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" prefWidth="512.0">
+                     <children>
+                        <Pane id="internalPaneOneOfAddProfile" fx:id="internalPaneOneOfAddProfile" prefHeight="75.16" prefWidth="512.0">
+                           <children>
+                              <Label id="labelAddProfileTop" fx:id="labelAddProfileTop" layoutX="115.0" layoutY="16.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="43.0" prefWidth="282.0" text="Nouveau profil" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Verdana Bold" size="34.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane id="internalPaneTwoOfAddProfile" fx:id="internalPaneTwoOfAddProfile" layoutY="75.16" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="428.84" prefWidth="512.0">
+                           <children>
+                              <Label id="labelAddProfileEnterName" fx:id="labelAddProfileEnterName" layoutX="145.5" layoutY="32.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="221.0" text="Entrer le nom">
+                                 <font>
+                                    <Font name="Verdana" size="32.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="fieldAddProfileEnterName" fx:id="fieldAddProfileEnterName" layoutX="90.0" layoutY="108.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#fieldAddProfileEnterNameKeyPressed" prefHeight="42.0" prefWidth="332.8">
+                                 <font>
+                                    <Font name="Verdana" size="22.0" />
+                                 </font>
+                              </TextField>
+                              <Label id="labelAddProfileSelectAvatar" fx:id="labelAddProfileSelectAvatar" layoutX="90.5" layoutY="174.0" prefHeight="40.0" prefWidth="331.0" text="Sélectionner l'avatar">
+                                 <font>
+                                    <Font name="Verdana" size="32.0" />
+                                 </font>
+                              </Label>
+                              <ImageView id="imageAddProfileSelectAvatar" fx:id="imageAddProfileSelectAvatar" fitHeight="180.0" fitWidth="180.0" layoutX="166.0" layoutY="235.0" pickOnBounds="true" preserveRatio="true" />
+                              <Button id="leftArrowBtnAddProfile" fx:id="leftArrowBtnAddProfile" focusTraversable="false" layoutX="28.0" layoutY="277.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#leftArrowBtnAddProfileClick" prefHeight="60.0" prefWidth="60.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <ImageView id="leftArrowBtnAddProfileImage" fx:id="leftArrowBtnAddProfileImage" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true">
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <image>
+                                          <Image url="@../../assets/leftArrow.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button id="rightArrowBtnAddProfile" fx:id="rightArrowBtnAddProfile" focusTraversable="false" layoutX="427.0" layoutY="277.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#rightArrowBtnAddProfileClick" prefHeight="60.0" prefWidth="60.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <ImageView id="rightArrowBtnAddProfileImage" fx:id="rightArrowBtnAddProfileImage" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true">
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <image>
+                                          <Image url="@../../assets/rightArrow.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button id="backBtnAddProfile" fx:id="backBtnAddProfile" focusTraversable="false" layoutX="10.0" layoutY="358.84" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#backBtnAddProfileClick" prefHeight="60.0" prefWidth="60.0">
+                                 <graphic>
+                                    <ImageView id="backBtnAddProfileImage" fx:id="backBtnAddProfileImage" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true">
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <image>
+                                          <Image url="@../../assets/close.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button id="checkBtnAddProfile" fx:id="checkBtnAddProfile" focusTraversable="false" layoutX="442.0" layoutY="358.84" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#checkBtnAddProfileClick" prefHeight="60.0" prefWidth="60.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <ImageView id="checkBtnAddProfileImage" fx:id="checkBtnAddProfileImage" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true">
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <image>
+                                          <Image url="@../../assets/check.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane id="paneModifyProfile" fx:id="paneModifyProfile" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane id="corePaneModifyProfile" fx:id="corePaneModifyProfile" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="1280.0">
+               <children>
+                  <Pane id="subPaneModifyProfile" fx:id="subPaneModifyProfile" layoutX="384.0" layoutY="56.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="504.0" prefWidth="512.0">
+                     <children>
+                        <Pane id="internalPaneOneOfModifyProfile" fx:id="internalPaneOneOfModifyProfile" prefHeight="75.16" prefWidth="512.0">
+                           <children>
+                              <Label id="labelModifyProfileTop" fx:id="labelModifyProfileTop" layoutX="98.0" layoutY="16.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="43.0" prefWidth="316.0" text="Modifier le profil" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Verdana Bold" size="34.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane id="internalPaneTwoOfModifyProfile" fx:id="internalPaneTwoOfModifyProfile" layoutY="75.6" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="428.4" prefWidth="512.0">
+                           <children>
+                              <Label id="labelModifyProfileEnterName" fx:id="labelModifyProfileEnterName" layoutX="161.0" layoutY="33.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="221.0" text="Entrer le nom">
+                                 <font>
+                                    <Font name="Verdana" size="32.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="fieldModifyProfileEnterName" fx:id="fieldModifyProfileEnterName" layoutX="90.0" layoutY="108.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#fieldModifyProfileEnterNameKeyPressed" prefWidth="332.8">
+                                 <font>
+                                    <Font name="Verdana" size="22.0" />
+                                 </font>
+                              </TextField>
+                              <Label id="labelModifyProfileSelectAvatar" fx:id="labelModifyProfileSelectAvatar" layoutX="114.0" layoutY="167.0" prefHeight="40.0" prefWidth="331.0" text="Sélectionner l'avatar">
+                                 <font>
+                                    <Font name="Verdana" size="32.0" />
+                                 </font>
+                              </Label>
+                              <ImageView id="imageModifyProfileSelectAvatar" fx:id="imageModifyProfileSelectAvatar" fitHeight="179.2" fitWidth="179.2" layoutX="166.0" layoutY="234.0" pickOnBounds="true" preserveRatio="true" />
+                              <Button id="leftArrowBtnModifyProfile" fx:id="leftArrowBtnModifyProfile" focusTraversable="false" layoutX="28.0" layoutY="277.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#leftArrowBtnModifyProfileClick" prefHeight="60.0" prefWidth="60.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <ImageView id="leftArrowBtnModifyProfileImage" fx:id="leftArrowBtnModifyProfileImage" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true">
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <image>
+                                          <Image url="@../../assets/leftArrow.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button id="rightArrowBtnModifyProfile" fx:id="rightArrowBtnModifyProfile" focusTraversable="false" layoutX="427.0" layoutY="277.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#rightArrowBtnModifyProfileClick" prefHeight="60.0" prefWidth="60.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <ImageView id="rightArrowBtnModifyProfileImage" fx:id="rightArrowBtnModifyProfileImage" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true">
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <image>
+                                          <Image url="@../../assets/rightArrow.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button id="checkBtnModifyProfile" fx:id="checkBtnModifyProfile" focusTraversable="false" layoutX="442.0" layoutY="364.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#checkBtnModifyProfileClick" prefHeight="60.0" prefWidth="60.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <ImageView id="checkBtnModifyProfileImage" fx:id="checkBtnModifyProfileImage" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true">
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <image>
+                                          <Image url="@../../assets/check.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button id="backBtnModifyProfile" fx:id="backBtnModifyProfile" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#backBtnModifyProfileClick" prefHeight="60.0" prefWidth="60.0">
+                                 <graphic>
+                                    <ImageView id="backBtnModifyProfileImage" fx:id="backBtnModifyProfileImage" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true">
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <image>
+                                          <Image url="@../../assets/close.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane id="paneDeleteProfile" fx:id="paneDeleteProfile" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane id="corePaneDeleteProfile" fx:id="corePaneDeleteProfile" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="1280.0">
+               <children>
+                  <Pane id="subPaneDeleteProfile" fx:id="subPaneDeleteProfile" layoutX="405.8" layoutY="63.2" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="489.6" prefWidth="468.4">
+                     <children>
+                        <Pane id="internalPaneOneOfDeleteProfile" fx:id="internalPaneOneOfDeleteProfile" prefHeight="75.16" prefWidth="512.0">
+                           <children>
+                              <Label id="labelDeleteProfileTop" fx:id="labelDeleteProfileTop" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="43.0" prefWidth="360.0" text="Supprimer le profil" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Verdana Bold" size="34.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane id="internalPaneTwoOfDeleteProfile" fx:id="internalPaneTwoOfDeleteProfile" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="428.4" prefWidth="512.0">
+                           <children>
+                              <Label id="labelStudentNameDeleteProfile" fx:id="labelStudentNameDeleteProfile" contentDisplay="CENTER" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="55.0" prefWidth="425.0" style="-fx-alignment: center;" text="Student Name" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Verdana Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <ImageView id="imageStudentDeleteProfile" fx:id="imageStudentDeleteProfile" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                              <Button id="undoDeleteProfileBtn" fx:id="undoDeleteProfileBtn" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#undoDeleteProfileBtnClick" prefHeight="60.0" prefWidth="60.0">
+                                 <graphic>
+                                    <ImageView id="undoDeleteProfileBtnImage" fx:id="undoDeleteProfileBtnImage" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../assets/close.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Button id="checkDeleteProfileBtn" fx:id="checkDeleteProfileBtn" focusTraversable="false" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#checkDeleteProfileBtnClick" prefHeight="60.0" prefWidth="60.0">
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                                 <graphic>
+                                    <ImageView id="checkDeleteProfileBtnImage" fx:id="checkDeleteProfileBtnImage" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../assets/check.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane id="paneModuleAccess" fx:id="paneModuleAccess" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane id="corePaneModuleAccess" fx:id="corePaneModuleAccess" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="1280.0">
+               <children>
+                  <Button id="backBtnModuleAccess" fx:id="backBtnModuleAccess" focusTraversable="false" layoutX="14.0" layoutY="532.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#backBtnModuleAccessClick" prefHeight="70.0" prefWidth="70.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView id="backBtnModuleAccessImage" fx:id="backBtnModuleAccessImage" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../assets/leftArrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Pane id="subPaneModuleAccess" fx:id="subPaneModuleAccess" prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Pane id="moduleAccessVue" fx:id="moduleAccessVue" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="170.6" prefWidth="511.8" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane id="paneModuleAccessEdit" fx:id="paneModuleAccessEdit" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" visible="false">
+         <children>
+            <ImageView id="currentEditModuleAccessImage" fx:id="currentEditModuleAccessImage" fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" />
+            <Pane id="corePaneModuleAccessEdit" fx:id="corePaneModuleAccessEdit" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="1280.0">
+               <children>
+                  <Button id="backBtnModuleAccessEdit" fx:id="backBtnModuleAccessEdit" disable="true" focusTraversable="false" layoutX="14.0" layoutY="532.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#backBtnModuleAccessEditClick" prefHeight="70.0" prefWidth="70.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView id="backBtnModuleAccessEditImage" fx:id="backBtnModuleAccessEditImage" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../assets/leftArrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button id="saveBtnModuleAccessEdit" fx:id="saveBtnModuleAccessEdit" focusTraversable="false" layoutX="1196.0" layoutY="532.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#saveBtnModuleAccessEditClick" prefHeight="70.0" prefWidth="70.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView id="saveBtnModuleAccessEditImage" fx:id="saveBtnModuleAccessEditImage" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../assets/save.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Pane id="internalPaneModuleAccessEdit" fx:id="internalPaneModuleAccessEdit" layoutX="160.0" layoutY="44.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="960.0">
+                     <children>
+                        <Pane id="titlePaneModuleAccessEdit" fx:id="titlePaneModuleAccessEdit" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="960.0">
+                           <children>
+                              <Label id="titleLabelModuleAccessEdit" fx:id="titleLabelModuleAccessEdit" layoutX="243.0" layoutY="8.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="44.0" prefWidth="474.0" text="Attribution des modules">
+                                 <font>
+                                    <Font name="Verdana Bold" size="35.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane id="subPaneModuleAccessEdit" fx:id="subPaneModuleAccessEdit" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="960.0">
+                           <children>
+                              <Pane id="layoutPaneModuleAccessEdit" fx:id="layoutPaneModuleAccessEdit" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="448.0" prefWidth="940.0">
+                                 <children>
+                                    <Pane id="internalPaneIndicatorModuleAccessEdit" fx:id="internalPaneIndicatorModuleAccessEdit" prefHeight="94.0" prefWidth="940.0">
+                                       <children>
+                                          <Button id="uncheckAllBtnModuleAccessEdit" fx:id="uncheckAllBtnModuleAccessEdit" focusTraversable="false" layoutX="14.0" layoutY="17.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#uncheckAllBtnModuleAccessEditClick" prefHeight="60.0" prefWidth="60.0">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <graphic>
+                                                <ImageView id="uncheckAllBtnModuleAccessEditImage" fx:id="uncheckAllBtnModuleAccessEditImage" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../assets/close.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Label id="labelUncheckModuleAccessEdit" fx:id="labelUncheckModuleAccessEdit" focusTraversable="false" layoutX="83.0" layoutY="28.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="240.0" style="-fx-alignment: center;" text="Tout décocher">
+                                             <font>
+                                                <Font name="Verdana Bold" size="30.0" />
+                                             </font>
+                                          </Label>
+                                          <Button id="checkAllBtnModuleAccessEdit" fx:id="checkAllBtnModuleAccessEdit" focusTraversable="false" layoutX="866.0" layoutY="17.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#checkAllBtnModuleAccessEditClick" prefHeight="60.0" prefWidth="60.0">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <graphic>
+                                                <ImageView id="checkAllBtnModuleAccessEditImage" fx:id="checkAllBtnModuleAccessEditImage" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../assets/check.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Label id="labelCheckModuleAccessEdit" fx:id="labelCheckModuleAccessEdit" focusTraversable="false" layoutX="650.0" layoutY="28.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="199.0" style="-fx-alignment: center;" text="Tout cocher">
+                                             <font>
+                                                <Font name="Verdana Bold" size="30.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                    <Pane id="internalPaneScrollModuleAccessEdit" fx:id="internalPaneScrollModuleAccessEdit" layoutY="94.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="354.0" prefWidth="940.0" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

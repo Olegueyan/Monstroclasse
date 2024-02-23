@@ -1,0 +1,1537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="paneContainer" fx:id="paneContainer" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="net.olegueyan.monstroclasse.module.content.AdminModEcriluController">
+   <children>
+      <ImageView id="appBanner" fx:id="appBanner" fitHeight="88.0" fitWidth="589.0" layoutX="346.0" layoutY="20.0" pickOnBounds="true">
+         <image>
+            <Image url="@../../assets/ecriluBanner.png" />
+         </image>
+      </ImageView>
+      <ImageView id="currentAccountImage" fx:id="currentAccountImage" fitHeight="156.0" fitWidth="156.0" layoutX="10.0" layoutY="10.0" pickOnBounds="true" />
+      <Pane id="paneHome" fx:id="paneHome" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane id="corePaneHome" fx:id="corePaneHome" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="1280.0">
+               <children>
+                  <Button id="closeModuleBtnHome" fx:id="closeModuleBtnHome" focusTraversable="false" layoutX="15.0" layoutY="531.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#closeModuleBtnHomeClick" prefHeight="70.0" prefWidth="70.0">
+                     <graphic>
+                        <ImageView id="closeModuleBtnHomeImage" fx:id="closeModuleBtnHomeImage" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <image>
+                              <Image url="@../../assets/leftArrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Pane fx:id="panePupilFollow" layoutX="320.0" layoutY="30.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#pupilFollowClick" prefHeight="90.0" prefWidth="640.0">
+                     <children>
+                        <Pane layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="605.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="605.0" text="Suivi des élèves" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Verdana Bold" size="40.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="paneWordCreation" layoutX="320.0" layoutY="160.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#wordCreationClick" prefHeight="90.0" prefWidth="640.0">
+                     <children>
+                        <Pane layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="605.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="605.0" text="Création de mot" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Verdana Bold" size="40.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="paneExerciseCreation" layoutX="320.0" layoutY="270.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#exerciseCreationClick" prefHeight="90.0" prefWidth="640.0">
+                     <children>
+                        <Pane layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="605.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="605.0" text="Création d'exercice" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Verdana Bold" size="40.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="paneSequenceCreation" layoutX="320.0" layoutY="380.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#sequenceCreationClick" prefHeight="90.0" prefWidth="640.0">
+                     <children>
+                        <Pane layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="605.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="605.0" text="Création de séquence" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Verdana Bold" size="40.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Pane fx:id="paneSequenceAttribution" layoutX="320.0" layoutY="496.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#sequenceAttributionClick" prefHeight="90.0" prefWidth="640.0">
+                     <children>
+                        <Pane layoutX="10.0" layoutY="10.0" prefHeight="70.0" prefWidth="605.0">
+                           <children>
+                              <Label alignment="CENTER" contentDisplay="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="70.0" prefWidth="605.0" text="Attribution des séquences" textAlignment="CENTER">
+                                 <font>
+                                    <Font name="Verdana Bold" size="40.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane id="paneWordsManager" fx:id="paneWordsManager" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane id="corePaneWordsManager" fx:id="corePaneWordsManager" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="1280.0">
+               <children>
+                  <Button id="backBtnWordsManager" fx:id="backBtnWordsManager" focusTraversable="false" layoutX="15.0" layoutY="531.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#backBtnWordsManagerClick" prefHeight="70.0" prefWidth="70.0">
+                     <graphic>
+                        <ImageView id="backBtnWordsManagerImage" fx:id="backBtnWordsManagerImage" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <image>
+                              <Image url="@../../assets/leftArrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Pane id="subPaneWordsManager" fx:id="subPaneWordsManager" layoutX="170.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="586.0" prefWidth="940.0">
+                     <children>
+                        <Pane id="internalPaneOneOfWordsManager" fx:id="internalPaneOneOfWordsManager" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="78.0" prefWidth="940.0">
+                           <children>
+                              <Label id="labelResearchWordsManager" fx:id="labelResearchWordsManager" layoutX="10.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="192.0" text="Rechercher">
+                                 <font>
+                                    <Font name="Verdana Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="fieldResearchWordsManager" fx:id="fieldResearchWordsManager" focusTraversable="false" layoutX="213.0" layoutY="20.0" prefHeight="38.0" prefWidth="260.0">
+                                 <font>
+                                    <Font name="Verdana" size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Label id="labelAddWordWordsManager" fx:id="labelAddWordWordsManager" alignment="CENTER_RIGHT" layoutX="520.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="334.0" text="Ajouter un mot">
+                                 <font>
+                                    <Font name="Verdana Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <Button id="addWordBtnWordsManager" fx:id="addWordBtnWordsManager" focusTraversable="false" layoutX="871.0" layoutY="9.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addWordBtnWordsManagerClick" prefHeight="60.0" prefWidth="60.0">
+                                 <graphic>
+                                    <ImageView id="addWordBtnWordsManagerImage" fx:id="addWordBtnWordsManagerImage" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../assets/add.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane id="internalPaneTwoOfWordsManager" fx:id="internalPaneTwoOfWordsManager" layoutY="78.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="840.0" />
+                        <Pane id="internalPaneThreeOfWordsManager" fx:id="internalPaneThreeOfWordsManager" layoutY="536.0" prefHeight="50.0" prefWidth="840.0">
+                           <children>
+                              <Pane id="firstPaginationPaneWordsManager" fx:id="firstPaginationPaneWordsManager" layoutX="250.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#firstPaginationPaneWordsManagerClick" prefHeight="40.0" prefWidth="95.0">
+                                 <children>
+                                    <Label id="firstPaginationLabelWordsManager" fx:id="firstPaginationLabelWordsManager" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="95.0" text="Premier">
+                                       <font>
+                                          <Font name="Verdana" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Button id="leftPaginationBtnWordsManager" fx:id="leftPaginationBtnWordsManager" focusTraversable="false" layoutX="370.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#leftPaginationBtnWordsManagerClick" prefHeight="40.0" prefWidth="40.0">
+                                 <graphic>
+                                    <ImageView id="leftPaginationBtnWordsManagerImage" fx:id="leftPaginationBtnWordsManagerImage" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <image>
+                                          <Image url="@../../assets/leftArrow.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <TextField id="fieldPaginationWordsManager" fx:id="fieldPaginationWordsManager" layoutX="432.5" layoutY="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="75.0">
+                                 <font>
+                                    <Font name="Verdana Bold" size="20.0" />
+                                 </font>
+                              </TextField>
+                              <Button id="rightPaginationBtnWordsManager" fx:id="rightPaginationBtnWordsManager" focusTraversable="false" layoutX="530.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#rightPaginationBtnWordsManagerClick" prefHeight="40.0" prefWidth="40.0">
+                                 <graphic>
+                                    <ImageView id="rightPaginationBtnWordsManagerImage" fx:id="rightPaginationBtnWordsManagerImage" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <image>
+                                          <Image url="@../../assets/rightArrow.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Pane id="lastPaginationPaneWordsManager" fx:id="lastPaginationPaneWordsManager" layoutX="590.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#lastPaginationPaneWordsManagerClick" prefHeight="40.0" prefWidth="95.0">
+                                 <children>
+                                    <Label id="lastPaginationLabelWordsManager" fx:id="lastPaginationLabelWordsManager" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="95.0" text="Dernier">
+                                       <font>
+                                          <Font name="Verdana" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane id="paneWordFeature" fx:id="paneWordFeature" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane id="corePaneWordFeature" fx:id="corePaneWordFeature" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="1280.0">
+               <children>
+                  <Button id="backBtnWordFeature" fx:id="backBtnWordFeature" focusTraversable="false" layoutX="15.0" layoutY="531.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#backBtnWordFeatureClick" prefHeight="70.0" prefWidth="70.0">
+                     <graphic>
+                        <ImageView id="backBtnWordFeatureImage" fx:id="backBtnWordFeatureImage" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <image>
+                              <Image url="@../../assets/leftArrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="leftArrowEcritoireBtnWordFeature" fx:id="leftArrowEcritoireBtnWordFeature" focusTraversable="false" layoutX="22.5" layoutY="340.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0">
+                     <graphic>
+                        <ImageView id="leftArrowEcritoireBtnWordFeatureImage" fx:id="leftArrowEcritoireBtnWordFeatureImage" fitHeight="55.0" fitWidth="55.0" pickOnBounds="true">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <image>
+                              <Image url="@../../assets/ecritoireLeft.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="rightArrowEcritoireBtnWordFeature" fx:id="rightArrowEcritoireBtnWordFeature" focusTraversable="false" layoutX="22.5" layoutY="340.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0">
+                     <graphic>
+                        <ImageView id="rightArrowEcritoireBtnWordFeatureImage" fx:id="rightArrowEcritoireBtnWordFeatureImage" fitHeight="55.0" fitWidth="55.0" pickOnBounds="true">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <image>
+                              <Image url="@../../assets/ecritoireRight.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Pane id="subPaneWordFeature" fx:id="subPaneWordFeature" layoutX="100.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="584.0" prefWidth="1150.0">
+                     <children>
+                        <Pane id="subBannerPaneWordFeature" fx:id="subBannerPaneWordFeature" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="1150.0">
+                           <children>
+                              <Pane id="internalPaneOneOfWordFeature" fx:id="internalPaneOneOfWordFeature" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="1150.0">
+                                 <children>
+                                    <Label id="wordLabelWordFeature" fx:id="wordLabelWordFeature" layoutX="10.0" layoutY="16.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="46.0" text="Mot">
+                                       <font>
+                                          <Font name="Verdana Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField id="wordFieldWordFeature" fx:id="wordFieldWordFeature" layoutX="75.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="350.0">
+                                       <font>
+                                          <Font name="Verdana" size="18.0" />
+                                       </font>
+                                    </TextField>
+                                    <Label id="labelIdentifierWordFeature" fx:id="labelIdentifierWordFeature" layoutX="550.0" layoutY="16.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="133.0" text="Identifiant">
+                                       <font>
+                                          <Font name="Verdana Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField id="fieldIdentifierWordFeature" fx:id="fieldIdentifierWordFeature" layoutX="705.0" layoutY="12.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="350.0">
+                                       <font>
+                                          <Font name="Verdana" size="18.0" />
+                                       </font>
+                                    </TextField>
+                                 </children>
+                              </Pane>
+                              <Pane id="internalPaneTwoOfWordFeature" fx:id="internalPaneTwoOfWordFeature" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="1150.0">
+                                 <children>
+                                    <Pane id="paneWordWrittenWordFeature" fx:id="paneWordWrittenWordFeature" layoutX="546.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="308.0" />
+                                    <Button id="carriageReturnBtnWordFeature" fx:id="carriageReturnBtnWordFeature" focusTraversable="false" layoutX="860.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#carriageReturnBtnWordFeatureClick" prefHeight="40.0" prefWidth="40.0">
+                                       <graphic>
+                                          <ImageView id="carriageReturnBtnWordFeatureImage" fx:id="carriageReturnBtnWordFeatureImage" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+                                             <viewport>
+                                                <Rectangle2D />
+                                             </viewport>
+                                             <image>
+                                                <Image url="@../../assets/leftArrowEdge.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor>
+                                    </Button>
+                                    <Button id="restartBtnWordFeature" fx:id="restartBtnWordFeature" focusTraversable="false" layoutX="910.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#restartBtnWordFeatureClick" prefHeight="40.0" prefWidth="40.0">
+                                       <graphic>
+                                          <ImageView id="restartBtnWordFeatureImage" fx:id="restartBtnWordFeatureImage" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../../assets/restart.png" />
+                                             </image>
+                                             <viewport>
+                                                <Rectangle2D />
+                                             </viewport>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button id="playAudioFileBtnWordFeature" fx:id="playAudioFileBtnWordFeature" focusTraversable="false" layoutX="140.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#playAudioFileBtnWordFeatureClick" prefHeight="40.0" prefWidth="40.0">
+                                       <graphic>
+                                          <ImageView id="playAudioFileBtnWordFeatureImage" fx:id="playAudioFileBtnWordFeatureImage" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../../assets/play.png" />
+                                             </image>
+                                             <viewport>
+                                                <Rectangle2D />
+                                             </viewport>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button id="deleteAudioFileBtnWordFeature" fx:id="deleteAudioFileBtnWordFeature" focusTraversable="false" layoutX="190.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#deleteAudioFileBtnWordFeatureClick" prefHeight="40.0" prefWidth="40.0">
+                                       <graphic>
+                                          <ImageView id="deleteAudioFileBtnWordFeatureImage" fx:id="deleteAudioFileBtnWordFeatureImage" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../../assets/trashcan.png" />
+                                             </image>
+                                             <viewport>
+                                                <Rectangle2D />
+                                             </viewport>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Label id="labelAudioWordFeature" fx:id="labelAudioWordFeature" layoutX="10.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="75.0" text="Audio">
+                                       <font>
+                                          <Font name="Verdana Bold" size="22.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="labelAudioFilenameWordFeature" fx:id="labelAudioFilenameWordFeature" layoutX="240.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="240.0" textAlignment="RIGHT">
+                                       <font>
+                                          <Font name="Verdana Bold Italic" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Label id="labelAudioFileIsTooHeavyWordFeature" fx:id="labelAudioFileIsTooHeavyWordFeature" layoutX="240.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="240.0" text="L'audio est trop lourd..." textAlignment="RIGHT" textFill="#bf0101">
+                                       <font>
+                                          <Font name="Verdana Italic" size="16.0" />
+                                       </font>
+                                    </Label>
+                                    <Button id="folderBtnWordFeature" fx:id="folderBtnWordFeature" focusTraversable="false" layoutX="90.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#folderBtnWordFeatureClick" prefHeight="40.0" prefWidth="40.0">
+                                       <graphic>
+                                          <ImageView id="folderBtnWordFeatureImage" fx:id="folderBtnWordFeatureImage" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+                                             <image>
+                                                <Image url="@../../assets/folder.png" />
+                                             </image>
+                                             <viewport>
+                                                <Rectangle2D />
+                                             </viewport>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </Pane>
+                              <Button id="validateBtnWordFeature" fx:id="validateBtnWordFeature" focusTraversable="false" layoutX="1050.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#validateBtnWordFeatureClick" prefHeight="80.0" prefWidth="80.0">
+                                 <graphic>
+                                    <ImageView id="validateBtnWordFeatureImage" fx:id="validateBtnWordFeatureImage" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true">
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <image>
+                                          <Image url="@../../assets/validate.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane id="internalPaneThreeOfWordFeature" fx:id="internalPaneThreeOfWordFeature" layoutY="120.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="1150.0" />
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane id="paneWordDeleteConfirm" fx:id="paneWordDeleteConfirm" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane id="corePaneWordDeleteConfirm" fx:id="corePaneWordDeleteConfirm" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="1280.0">
+               <children>
+                  <Pane id="subPaneWordDeleteConfirm" fx:id="subPaneWordDeleteConfirm" layoutX="371.0" layoutY="74.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="538.0">
+                     <children>
+                        <Label id="mainLabelWordDeleteConfirm" fx:id="mainLabelWordDeleteConfirm" contentDisplay="CENTER" focusTraversable="false" layoutX="33.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="472.0" style="-fx-alignment: center;" text="Êtes vous sûr de vouloir supprimer ce mot ?" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true">
+                           <font>
+                              <Font name="Verdana" size="30.0" />
+                           </font>
+                        </Label>
+                        <Label id="wordLabelWordDeleteConfirm" fx:id="wordLabelWordDeleteConfirm" contentDisplay="CENTER" focusTraversable="false" layoutX="54.0" layoutY="320.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="430.0" style="-fx-alignment: center;" text="Anticonstitutionnellement" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true">
+                           <font>
+                              <Font name="Verdana Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Button id="undoWordDeleteConfirmBtn" fx:id="undoWordDeleteConfirmBtn" focusTraversable="false" layoutX="10.0" layoutY="398.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#undoWordDeleteConfirmBtnClick" prefHeight="60.0" prefWidth="60.0">
+                           <graphic>
+                              <ImageView id="undoWordDeleteConfirmBtnImage" fx:id="undoWordDeleteConfirmBtnImage" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../assets/close.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button id="checkWordDeleteConfirmBtn" fx:id="checkWordDeleteConfirmBtn" focusTraversable="false" layoutX="468.0" layoutY="398.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#checkWordDeleteConfirmBtnClick" prefHeight="60.0" prefWidth="60.0">
+                           <graphic>
+                              <ImageView id="checkWordDeleteConfirmBtnImage" fx:id="checkWordDeleteConfirmBtnImage" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../assets/check.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane id="paneExercisesManager" fx:id="paneExercisesManager" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane id="corePaneExercisesManager" fx:id="corePaneExercisesManager" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="1280.0">
+               <children>
+                  <Button id="backBtnExercisesManager" fx:id="backBtnExercisesManager" focusTraversable="false" layoutX="15.0" layoutY="531.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#backBtnExercisesManagerClick" prefHeight="70.0" prefWidth="70.0">
+                     <graphic>
+                        <ImageView id="backBtnExercisesManagerImage" fx:id="backBtnExercisesManagerImage" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <image>
+                              <Image url="@../../assets/leftArrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Pane id="subPaneExercisesManager" fx:id="subPaneExercisesManager" layoutX="170.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="586.0" prefWidth="940.0">
+                     <children>
+                        <Pane id="internalPaneOneOfExercisesManager" fx:id="internalPaneOneOfExercisesManager" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="78.0" prefWidth="940.0">
+                           <children>
+                              <Label id="labelResearchExercisesManager" fx:id="labelResearchExercisesManager" layoutX="10.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="192.0" text="Rechercher">
+                                 <font>
+                                    <Font name="Verdana Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="fieldResearchExercisesManager" fx:id="fieldResearchExercisesManager" focusTraversable="false" layoutX="213.0" layoutY="20.0" prefHeight="38.0" prefWidth="280.0">
+                                 <font>
+                                    <Font name="Verdana" size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Label id="labelAddExerciseExercisesManager" fx:id="labelAddExerciseExercisesManager" alignment="CENTER_RIGHT" layoutX="520.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="334.0" text="Ajouter un exercice">
+                                 <font>
+                                    <Font name="Verdana Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <Button id="addExerciseBtnExercisesManager" fx:id="addExerciseBtnExercisesManager" layoutX="871.0" layoutY="9.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addExerciseBtnExercisesManagerClick" prefHeight="60.0" prefWidth="60.0">
+                                 <graphic>
+                                    <ImageView id="addExerciseBtnExercisesManagerImage" fx:id="addExerciseBtnExercisesManagerImage" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../assets/add.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane id="internalPaneTwoOfExercisesManager" fx:id="internalPaneTwoOfExercisesManager" layoutY="78.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="840.0" />
+                        <Pane id="internalPaneThreeOfExercisesManager" fx:id="internalPaneThreeOfExercisesManager" layoutY="536.0" prefHeight="50.0" prefWidth="940.0">
+                           <children>
+                              <Pane id="firstPaginationPaneExercisesManager" fx:id="firstPaginationPaneExercisesManager" layoutX="250.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#firstPaginationPaneExercisesManagerClick" prefHeight="40.0" prefWidth="95.0">
+                                 <children>
+                                    <Label id="firstPaginationLabelExercisesManager" fx:id="firstPaginationLabelExercisesManager" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="95.0" text="Premier">
+                                       <font>
+                                          <Font name="Verdana" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Button id="leftPaginationBtnExercisesManager" fx:id="leftPaginationBtnExercisesManager" focusTraversable="false" layoutX="370.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#leftPaginationBtnExercisesManagerClick" prefHeight="40.0" prefWidth="40.0">
+                                 <graphic>
+                                    <ImageView id="leftPaginationBtnExercisesManagerImage" fx:id="leftPaginationBtnExercisesManagerImage" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <image>
+                                          <Image url="@../../assets/leftArrow.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <TextField id="fieldPaginationExercisesManager" fx:id="fieldPaginationExercisesManager" layoutX="432.5" layoutY="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#fieldPaginationExercisesManagerKeyPressed" prefHeight="38.0" prefWidth="75.0">
+                                 <font>
+                                    <Font name="Verdana Bold" size="20.0" />
+                                 </font>
+                              </TextField>
+                              <Button id="rightPaginationBtnExercisesManager" fx:id="rightPaginationBtnExercisesManager" focusTraversable="false" layoutX="530.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#rightPaginationBtnExercisesManagerClick" prefHeight="40.0" prefWidth="40.0">
+                                 <graphic>
+                                    <ImageView id="rightPaginationBtnExercisesManagerImage" fx:id="rightPaginationBtnExercisesManagerImage" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <image>
+                                          <Image url="@../../assets/rightArrow.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Pane id="lastPaginationPaneExercisesManager" fx:id="lastPaginationPaneExercisesManager" layoutX="590.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#lastPaginationPaneExercisesManagerClick" prefHeight="40.0" prefWidth="95.0">
+                                 <children>
+                                    <Label id="lastPaginationLabelExercisesManager" fx:id="lastPaginationLabelExercisesManager" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="95.0" text="Dernier">
+                                       <font>
+                                          <Font name="Verdana" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane id="paneExerciseFeature" fx:id="paneExerciseFeature" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane id="corePaneExerciseFeature" fx:id="corePaneExerciseFeature" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="1280.0">
+               <children>
+                  <Button id="backBtnExerciseFeature" fx:id="backBtnExerciseFeature" focusTraversable="false" layoutX="15.0" layoutY="531.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#backBtnExerciseFeatureClick" prefHeight="70.0" prefWidth="70.0">
+                     <graphic>
+                        <ImageView id="backBtnExerciseFeatureImage" fx:id="backBtnExerciseFeatureImage" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <image>
+                              <Image url="@../../assets/leftArrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Pane id="internalPaneOneOfExerciseFeature" fx:id="internalPaneOneOfExerciseFeature" layoutX="110.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="550.0">
+                     <children>
+                        <Pane id="internalTitlePaneExerciseFeature" fx:id="internalTitlePaneExerciseFeature" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="550.0">
+                           <children>
+                              <Label fx:id="internalTitleLabelExerciseFeature" alignment="CENTER" layoutX="134.0" layoutY="12.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="282.0" text="Création d'exercice">
+                                 <font>
+                                    <Font name="Verdana Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane id="subInternalOneofOneExerciseFeature" fx:id="subInternalOneofOneExerciseFeature" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="550.0">
+                           <children>
+                              <Label id="labelResearchExerciseFeature" fx:id="labelResearchExerciseFeature" layoutX="10.0" layoutY="16.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="141.0" text="Rechercher">
+                                 <font>
+                                    <Font name="Verdana Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="fieldResearchWordExerciseFeature" fx:id="fieldResearchWordExerciseFeature" layoutX="160.0" layoutY="12.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="330.0">
+                                 <font>
+                                    <Font name="Verdana" size="18.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </Pane>
+                        <Pane id="subInternalTwoofOneExerciseFeature" fx:id="subInternalTwoofOneExerciseFeature" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="550.0" />
+                        <Pane id="subInternalThreeofOneExerciseFeature" fx:id="subInternalThreeofOneExerciseFeature" layoutY="520.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="550.0">
+                           <children>
+                              <Pane id="firstPaginationPaneExerciseFeature" fx:id="firstPaginationPaneExerciseFeature" layoutX="25.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#firstPaginationPaneExerciseFeatureClick" prefHeight="40.0" prefWidth="95.0">
+                                 <children>
+                                    <Label id="firstPaginationLabelExerciseFeature" fx:id="firstPaginationLabelExerciseFeature" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="95.0" text="Premier">
+                                       <font>
+                                          <Font name="Verdana" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Button id="leftPaginationBtnExerciseFeature" fx:id="leftPaginationBtnExerciseFeature" focusTraversable="false" layoutX="180.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#leftPaginationBtnExerciseFeatureClick" prefHeight="40.0" prefWidth="40.0">
+                                 <graphic>
+                                    <ImageView id="leftPaginationBtnExerciseFeatureImage" fx:id="leftPaginationBtnExerciseFeatureImage" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <image>
+                                          <Image url="@../../assets/leftArrow.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <TextField id="fieldPaginationExerciseFeature" fx:id="fieldPaginationExerciseFeature" layoutX="237.5" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#fieldPaginationExerciseFeatureKeyPressed" prefHeight="38.0" prefWidth="75.0">
+                                 <font>
+                                    <Font name="Verdana Bold" size="20.0" />
+                                 </font>
+                              </TextField>
+                              <Button id="rightPaginationBtnExerciseFeature" fx:id="rightPaginationBtnExerciseFeature" focusTraversable="false" layoutX="330.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#rightPaginationBtnExerciseFeatureClick" prefHeight="40.0" prefWidth="40.0">
+                                 <graphic>
+                                    <ImageView id="rightPaginationBtnExerciseFeatureImage" fx:id="rightPaginationBtnExerciseFeatureImage" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <image>
+                                          <Image url="@../../assets/rightArrow.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Pane id="lastPaginationPaneExerciseFeature" fx:id="lastPaginationPaneExerciseFeature" layoutX="430.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#lastPaginationPaneExerciseFeatureClick" prefHeight="40.0" prefWidth="95.0">
+                                 <children>
+                                    <Label id="lastPaginationLabelExerciseFeature" fx:id="lastPaginationLabelExerciseFeature" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="95.0" text="Dernier">
+                                       <font>
+                                          <Font name="Verdana" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Pane id="internalPaneTwoOfExerciseFeature" fx:id="internalPaneTwoOfExerciseFeature" layoutX="680.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="550.0">
+                     <children>
+                        <Label id="labelIdentifierExerciseFeature" fx:id="labelIdentifierExerciseFeature" layoutX="10.0" layoutY="16.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="133.0" text="Identifiant">
+                           <font>
+                              <Font name="Verdana Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <TextField id="fieldIdentifierExerciseFeature" fx:id="fieldIdentifierExerciseFeature" layoutX="155.0" layoutY="12.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="300.0">
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label id="labelTitleExerciseFeature" fx:id="labelTitleExerciseFeature" layoutX="10.0" layoutY="76.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="59.0" text="Titre">
+                           <font>
+                              <Font name="Verdana Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <TextField id="fieldTitleExerciseFeature" fx:id="fieldTitleExerciseFeature" layoutX="155.0" layoutY="72.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="300.0">
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Button id="encodingBtnExerciseFeature" fx:id="encodingBtnExerciseFeature" focusTraversable="false" layoutX="470.0" layoutY="25.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#encodingBtnExerciseFeatureClick" prefHeight="70.0" prefWidth="70.0">
+                           <graphic>
+                              <ImageView id="encodingBtnExerciseFeatureImage" fx:id="encodingBtnExerciseFeatureImage" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../../assets/edit.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane id="internalPaneThreeOfExerciseFeature" fx:id="internalPaneThreeOfExerciseFeature" layoutX="680.0" layoutY="148.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="550.0" />
+                  <HBox id="internalPaneFourOfExerciseFeature" fx:id="internalPaneFourOfExerciseFeature" alignment="CENTER" layoutX="680.0" layoutY="568.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="550.0">
+                     <children>
+                        <Label id="wordCountExerciseFeature" fx:id="wordCountExerciseFeature" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="550.0" text="Nombre de mots : ">
+                           <font>
+                              <Font name="Verdana Bold Italic" size="21.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane id="paneExerciseFeatureEncoding" fx:id="paneExerciseFeatureEncoding" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane id="corePaneExerciseFeatureEncoding" fx:id="corePaneExerciseFeatureEncoding" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="1280.0">
+               <children>
+                  <Button id="backBtnAddExerciseEncoding" fx:id="backBtnExerciseFeatureEncoding" focusTraversable="false" layoutX="15.0" layoutY="531.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#backBtnExerciseFeatureEncodingClick" prefHeight="70.0" prefWidth="70.0">
+                     <graphic>
+                        <ImageView id="backBtnExerciseFeatureEncodingImage" fx:id="backBtnExerciseFeatureEncodingImage" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <image>
+                              <Image url="@../../assets/leftArrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="leftArrowEcritoireBtnExerciseFeatureEncoding" fx:id="leftArrowEcritoireBtnExerciseFeatureEncoding" focusTraversable="false" layoutX="22.5" layoutY="340.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0">
+                     <graphic>
+                        <ImageView id="leftArrowEcritoireBtnAddExerciseEncodingImage" fx:id="leftArrowEcritoireBtnExerciseFeatureEncodingImage" fitHeight="55.0" fitWidth="55.0" pickOnBounds="true">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <image>
+                              <Image url="@../../assets/ecritoireLeft.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="rightArrowEcritoireBtnExerciseFeatureEncoding" fx:id="rightArrowEcritoireBtnExerciseFeatureEncoding" focusTraversable="false" layoutX="22.5" layoutY="340.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="55.0" prefWidth="55.0">
+                     <graphic>
+                        <ImageView id="rightArrowEcritoireBtnExerciseFeatureEncodingImage" fx:id="rightArrowEcritoireBtnExerciseFeatureEncodingImage" fitHeight="55.0" fitWidth="55.0" pickOnBounds="true">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <image>
+                              <Image url="@../../assets/ecritoireRight.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Pane id="ecritoireSubPaneExerciseFeatureEncoding" fx:id="ecritoireSubPaneExerciseFeatureEncoding" layoutX="100.0" layoutY="127.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="1150.0" />
+                  <Button id="validateBtnExerciseFeatureEncoding" fx:id="validateBtnExerciseFeatureEncoding" focusTraversable="false" layoutX="15.0" layoutY="451.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#validateBtnExerciseFeatureEncodingClick" prefHeight="70.0" prefWidth="70.0">
+                     <graphic>
+                        <ImageView id="validateBtnExerciseFeatureEncodingImage" fx:id="validateBtnExerciseFeatureEncodingImage" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <image>
+                              <Image url="@../../assets/check.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane id="paneExerciseDeleteConfirm" fx:id="paneExerciseDeleteConfirm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane id="corePaneExerciseDeleteConfirm" fx:id="corePaneExerciseDeleteConfirm" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="1280.0">
+               <children>
+                  <Pane id="subPaneExerciseDeleteConfirm" fx:id="subPaneExerciseDeleteConfirm" layoutX="371.0" layoutY="74.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="538.0">
+                     <children>
+                        <Label id="mainLabelExerciseDeleteConfirm" fx:id="mainLabelExerciseDeleteConfirm" contentDisplay="CENTER" focusTraversable="false" layoutX="33.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="472.0" style="-fx-alignment: center;" text="Êtes vous sûr de vouloir supprimer cet exercice ?" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true">
+                           <font>
+                              <Font name="Verdana" size="30.0" />
+                           </font>
+                        </Label>
+                        <Label id="exerciseLabelExerciseDeleteConfirm" fx:id="exerciseLabelExerciseDeleteConfirm" contentDisplay="CENTER" focusTraversable="false" layoutX="54.0" layoutY="320.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="430.0" style="-fx-alignment: center;" text="Anticonstitutionnellement" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true">
+                           <font>
+                              <Font name="Verdana Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Button id="undoExerciseDeleteConfirmBtn" fx:id="undoExerciseDeleteConfirmBtn" focusTraversable="false" layoutX="10.0" layoutY="398.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#undoExerciseDeleteConfirmBtnClick" prefHeight="60.0" prefWidth="60.0">
+                           <graphic>
+                              <ImageView id="undoExerciseDeleteConfirmBtnImage" fx:id="undoExerciseDeleteConfirmBtnImage" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../assets/close.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button id="checkExerciseDeleteConfirmBtn" fx:id="checkExerciseDeleteConfirmBtn" focusTraversable="false" layoutX="468.0" layoutY="398.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#checkExerciseDeleteConfirmBtnClick" prefHeight="60.0" prefWidth="60.0">
+                           <graphic>
+                              <ImageView id="checkExerciseDeleteConfirmBtn" fx:id="checkExerciseDeleteConfirmBtnImage" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../assets/check.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane id="paneSequencesManager" fx:id="paneSequencesManager" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane id="corePaneSequencesManager" fx:id="corePaneSequencesManager" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="1280.0">
+               <children>
+                  <Button id="backBtnSequencesManager" fx:id="backBtnSequencesManager" focusTraversable="false" layoutX="15.0" layoutY="531.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#backBtnSequencesManagerClick" prefHeight="70.0" prefWidth="70.0">
+                     <graphic>
+                        <ImageView id="backBtnSequencesManagerImage" fx:id="backBtnSequencesManagerImage" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <image>
+                              <Image url="@../../assets/leftArrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Pane id="subPaneSequencesManager" fx:id="subPaneSequencesManager" layoutX="170.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="586.0" prefWidth="940.0">
+                     <children>
+                        <Pane id="internalPaneOneOfSequencesManager" fx:id="internalPaneOneOfSequencesManager" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="78.0" prefWidth="940.0">
+                           <children>
+                              <Label id="labelResearchSequencesManager" fx:id="labelResearchSequencesManager" layoutX="10.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="192.0" text="Rechercher">
+                                 <font>
+                                    <Font name="Verdana Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="fieldResearchSequencesManager" fx:id="fieldResearchSequencesManager" focusTraversable="false" layoutX="213.0" layoutY="20.0" prefHeight="38.0" prefWidth="280.0">
+                                 <font>
+                                    <Font name="Verdana" size="15.0" />
+                                 </font>
+                              </TextField>
+                              <Label id="labelAddSequenceSequencesManager" fx:id="labelAddSequenceSequencesManager" alignment="CENTER_RIGHT" layoutX="520.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="334.0" text="Ajouter une séquence">
+                                 <font>
+                                    <Font name="Verdana Bold" size="27.0" />
+                                 </font>
+                              </Label>
+                              <Button id="addSequenceBtnSequencesManager" fx:id="addSequenceBtnSequencesManager" layoutX="871.0" layoutY="9.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#addSequenceBtnSequencesManagerClick" prefHeight="60.0" prefWidth="60.0">
+                                 <graphic>
+                                    <ImageView id="addSequenceBtnSequencesManagerImage" fx:id="addSequenceBtnSequencesManagerImage" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@../../assets/add.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </Pane>
+                        <Pane id="internalPaneTwoOfSequencesManager" fx:id="internalPaneTwoOfSequencesManager" layoutY="78.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="840.0" />
+                        <Pane id="internalPaneThreeOfSequencesManager" fx:id="internalPaneThreeOfSequencesManager" layoutY="536.0" prefHeight="50.0" prefWidth="940.0">
+                           <children>
+                              <Pane id="firstPaginationPaneSequencesManager" fx:id="firstPaginationPaneSequencesManager" layoutX="250.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#firstPaginationPaneSequencesManagerClick" prefHeight="40.0" prefWidth="95.0">
+                                 <children>
+                                    <Label id="firstPaginationLabelSequencesManager" fx:id="firstPaginationLabelSequencesManager" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="95.0" text="Premier">
+                                       <font>
+                                          <Font name="Verdana" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Button id="leftPaginationBtnSequencesManager" fx:id="leftPaginationBtnSequencesManager" focusTraversable="false" layoutX="370.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#leftPaginationBtnSequencesManagerClick" prefHeight="40.0" prefWidth="40.0">
+                                 <graphic>
+                                    <ImageView id="leftPaginationBtnSequencesManagerImage" fx:id="leftPaginationBtnSequencesManagerImage" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <image>
+                                          <Image url="@../../assets/leftArrow.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <TextField id="fieldPaginationSequencesManager" fx:id="fieldPaginationSequencesManager" layoutX="432.5" layoutY="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#fieldPaginationSequencesManagerKeyPressed" prefHeight="38.0" prefWidth="75.0">
+                                 <font>
+                                    <Font name="Verdana Bold" size="20.0" />
+                                 </font>
+                              </TextField>
+                              <Button id="rightPaginationBtnSequencesManager" fx:id="rightPaginationBtnSequencesManager" focusTraversable="false" layoutX="530.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#rightPaginationBtnSequencesManagerClick" prefHeight="40.0" prefWidth="40.0">
+                                 <graphic>
+                                    <ImageView id="rightPaginationBtnSequencesManagerImage" fx:id="rightPaginationBtnSequencesManagerImage" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <image>
+                                          <Image url="@../../assets/rightArrow.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Pane id="lastPaginationPaneSequencesManager" fx:id="lastPaginationPaneSequencesManager" layoutX="590.0" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#lastPaginationPaneSequencesManagerClick" prefHeight="40.0" prefWidth="95.0">
+                                 <children>
+                                    <Label id="lastPaginationLabelSequencesManager" fx:id="lastPaginationLabelSequencesManager" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="95.0" text="Dernier">
+                                       <font>
+                                          <Font name="Verdana" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane id="paneSequenceFeature" fx:id="paneSequenceFeature" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane id="corePaneSequenceFeature" fx:id="corePaneSequenceFeature" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="1280.0">
+               <children>
+                  <Button id="backBtnSequenceFeature" fx:id="backBtnSequenceFeature" focusTraversable="false" layoutX="15.0" layoutY="531.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#backBtnSequenceFeatureClick" prefHeight="70.0" prefWidth="70.0">
+                     <graphic>
+                        <ImageView id="backBtnSequenceFeatureImage" fx:id="backBtnSequenceFeatureImage" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <image>
+                              <Image url="@../../assets/leftArrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Pane id="internalPaneOneOfSequenceFeature" fx:id="internalPaneOneOfSequenceFeature" layoutX="110.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="550.0">
+                     <children>
+                        <Pane fx:id="internalTitlePaneSequenceFeature" prefHeight="60.0" prefWidth="550.0">
+                           <children>
+                              <Label id="internalTitleLabelSequenceFeature" fx:id="internalTitleLabelSequenceFeature" alignment="CENTER" layoutX="116.0" layoutY="12.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="318.0" text="Création de Séquence">
+                                 <font>
+                                    <Font name="Verdana Bold" size="26.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane id="subInternalOneofOneSequenceFeature" fx:id="subInternalOneofOneSequenceFeature" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="550.0">
+                           <children>
+                              <Label id="labelResearchSequenceFeature" fx:id="labelResearchSequenceFeature" layoutX="10.0" layoutY="16.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="141.0" text="Rechercher">
+                                 <font>
+                                    <Font name="Verdana Bold" size="22.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="fieldResearchExerciseSequenceFeature" fx:id="fieldResearchExerciseSequenceFeature" layoutX="160.0" layoutY="12.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="330.0">
+                                 <font>
+                                    <Font name="Verdana" size="18.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </Pane>
+                        <Pane id="subInternalTwoofOneSequenceFeature" fx:id="subInternalTwoofOneSequenceFeature" layoutY="120.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="550.0" />
+                        <Pane id="subInternalThreeofOneSequenceFeature" fx:id="subInternalThreeofOneSequenceFeature" layoutY="520.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="550.0">
+                           <children>
+                              <Pane id="firstPaginationPaneSequenceFeature" fx:id="firstPaginationPaneSequenceFeature" layoutX="25.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#firstPaginationPaneSequenceFeatureClick" prefHeight="40.0" prefWidth="95.0">
+                                 <children>
+                                    <Label id="firstPaginationLabelSequenceFeature" fx:id="firstPaginationLabelSequenceFeature" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="95.0" text="Premier">
+                                       <font>
+                                          <Font name="Verdana" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Button id="leftPaginationBtnSequenceFeature" fx:id="leftPaginationBtnSequenceFeature" focusTraversable="false" layoutX="180.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#leftPaginationBtnSequenceFeatureClick" prefHeight="40.0" prefWidth="40.0">
+                                 <graphic>
+                                    <ImageView id="leftPaginationBtnSequenceFeatureImage" fx:id="leftPaginationBtnSequenceFeatureImage" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <image>
+                                          <Image url="@../../assets/leftArrow.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <TextField id="fieldPaginationSequenceFeature" fx:id="fieldPaginationSequenceFeature" layoutX="237.5" layoutY="11.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#fieldPaginationSequenceFeatureKeyPressed" prefHeight="38.0" prefWidth="75.0">
+                                 <font>
+                                    <Font name="Verdana Bold" size="20.0" />
+                                 </font>
+                              </TextField>
+                              <Button id="rightPaginationBtnSequenceFeature" fx:id="rightPaginationBtnSequenceFeature" focusTraversable="false" layoutX="330.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#rightPaginationBtnSequenceFeatureClick" prefHeight="40.0" prefWidth="40.0">
+                                 <graphic>
+                                    <ImageView id="rightPaginationBtnSequenceFeatureImage" fx:id="rightPaginationBtnSequenceFeatureImage" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <image>
+                                          <Image url="@../../assets/rightArrow.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Pane id="lastPaginationPaneSequenceFeature" fx:id="lastPaginationPaneSequenceFeature" layoutX="430.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#lastPaginationPaneSequenceFeatureClick" prefHeight="40.0" prefWidth="95.0">
+                                 <children>
+                                    <Label id="lastPaginationLabelSequenceFeature" fx:id="lastPaginationLabelSequenceFeature" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="95.0" text="Dernier">
+                                       <font>
+                                          <Font name="Verdana" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+                  <Pane id="internalPaneTwoOfSequenceFeature" fx:id="internalPaneTwoOfSequenceFeature" layoutX="680.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="120.0" prefWidth="550.0">
+                     <children>
+                        <Label id="labelIdentifierSequenceFeature" fx:id="labelIdentifierSequenceFeature" layoutX="10.0" layoutY="16.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="133.0" text="Identifiant">
+                           <font>
+                              <Font name="Verdana Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <TextField id="fieldIdentifierSequenceFeature" fx:id="fieldIdentifierSequenceFeature" layoutX="155.0" layoutY="12.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="300.0">
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Label id="labelTitleSequenceFeature" fx:id="labelTitleSequenceFeature" layoutX="10.0" layoutY="76.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="59.0" text="Titre">
+                           <font>
+                              <Font name="Verdana Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <TextField id="fieldTitleSequenceFeature" fx:id="fieldTitleSequenceFeature" layoutX="155.0" layoutY="72.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="36.0" prefWidth="300.0">
+                           <font>
+                              <Font name="Verdana" size="18.0" />
+                           </font>
+                        </TextField>
+                        <Button id="validateBtnSequenceFeature" fx:id="validateBtnSequenceFeature" focusTraversable="false" layoutX="470.0" layoutY="25.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#validateBtnSequenceFeatureClick" prefHeight="70.0" prefWidth="70.0">
+                           <graphic>
+                              <ImageView id="validateBtnSequenceFeatureImage" fx:id="validateBtnSequenceFeatureImage" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true">
+                                 <image>
+                                    <Image url="@../../assets/validate.png" />
+                                 </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </Pane>
+                  <Pane id="internalPaneThreeOfSequenceFeature" fx:id="internalPaneThreeOfSequenceFeature" layoutX="680.0" layoutY="148.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="550.0" />
+                  <HBox id="internalPaneFourOfSequenceFeature" fx:id="internalPaneFourOfSequenceFeature" alignment="CENTER" layoutX="680.0" layoutY="568.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="550.0">
+                     <children>
+                        <Label id="exerciseCountSequenceFeature" fx:id="exerciseCountSequenceFeature" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="30.0" prefWidth="550.0" text="Nombre d'exercice : ">
+                           <font>
+                              <Font name="Verdana Bold Italic" size="21.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane id="paneSequenceDeleteConfirm" fx:id="paneSequenceDeleteConfirm" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane id="corePaneSequenceDeleteConfirm" fx:id="corePaneSequenceDeleteConfirm" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="1280.0">
+               <children>
+                  <Pane id="subPaneSequenceDeleteConfirm" fx:id="subPaneSequenceDeleteConfirm" layoutX="371.0" layoutY="74.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="538.0">
+                     <children>
+                        <Label id="mainLabelSequenceDeleteConfirm" fx:id="mainLabelSequenceDeleteConfirm" contentDisplay="CENTER" focusTraversable="false" layoutX="33.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="90.0" prefWidth="472.0" style="-fx-alignment: center;" text="Êtes vous sûr de vouloir supprimer cet exercice ?" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true">
+                           <font>
+                              <Font name="Verdana" size="30.0" />
+                           </font>
+                        </Label>
+                        <Label id="sequenceLabelSequenceDeleteConfirm" fx:id="sequenceLabelSequenceDeleteConfirm" contentDisplay="CENTER" focusTraversable="false" layoutX="54.0" layoutY="320.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="430.0" style="-fx-alignment: center;" text="Anticonstitutionnellement" textAlignment="CENTER" textOverrun="WORD_ELLIPSIS" wrapText="true">
+                           <font>
+                              <Font name="Verdana Bold" size="25.0" />
+                           </font>
+                        </Label>
+                        <Button id="undoSequenceDeleteConfirmBtn" fx:id="undoSequenceDeleteConfirmBtn" focusTraversable="false" layoutX="10.0" layoutY="398.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#undoSequenceDeleteConfirmBtnClick" prefHeight="60.0" prefWidth="60.0">
+                           <graphic>
+                              <ImageView id="undoSequenceDeleteConfirmBtnImage" fx:id="undoSequenceDeleteConfirmBtnImage" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../assets/close.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button id="checkSequenceDeleteConfirmBtn" fx:id="checkSequenceDeleteConfirmBtn" focusTraversable="false" layoutX="468.0" layoutY="398.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#checkSequenceDeleteConfirmBtnClick" prefHeight="60.0" prefWidth="60.0">
+                           <graphic>
+                              <ImageView id="checkSequenceDeleteConfirmBtnImage" fx:id="checkSequenceDeleteConfirmBtnImage" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../assets/check.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane id="paneSequenceAttributionManager" fx:id="paneSequenceAttributionManager" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane id="corePaneSequenceAttributionManager" fx:id="corePaneSequenceAttributionManager" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="1280.0">
+               <children>
+                  <Button id="backBtnSequenceAttributionManager" fx:id="backBtnSequenceAttributionManager" focusTraversable="false" layoutX="15.0" layoutY="531.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#backBtnSequenceAttributionManagerClick" prefHeight="70.0" prefWidth="70.0">
+                     <graphic>
+                        <ImageView id="backBtnSequenceAttributionManagerImage" fx:id="backBtnSequenceAttributionManagerImage" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <image>
+                              <Image url="@../../assets/leftArrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Pane id="subPaneSequenceAttributionManager" fx:id="subPaneSequenceAttributionManager" layoutX="320.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="586.0" prefWidth="640.0">
+                     <children>
+                        <Pane id="internalPaneOneOfSequenceAttributionManager" fx:id="internalPaneOneOfSequenceAttributionManager" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="78.0" prefWidth="640.0">
+                           <children>
+                              <Label id="labelResearchSequenceAttributionManager" fx:id="labelResearchSequenceAttributionManager" layoutX="10.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="192.0" text="Rechercher">
+                                 <font>
+                                    <Font name="Verdana Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="fieldResearchSequenceAttributionManager" fx:id="fieldResearchSequenceAttributionManager" focusTraversable="false" layoutX="213.0" layoutY="20.0" prefHeight="38.0" prefWidth="415.0">
+                                 <font>
+                                    <Font name="Verdana" size="15.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </Pane>
+                        <Pane id="internalPaneTwoOfSequenceAttributionManager" fx:id="internalPaneTwoOfSequenceAttributionManager" layoutY="78.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="640.0" />
+                        <Pane id="internalPaneThreeOfSequenceAttributionManager" fx:id="internalPaneThreeOfSequenceAttributionManager" layoutY="536.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="640.0">
+                           <children>
+                              <Pane id="firstPaginationPaneSequenceAttributionManager" fx:id="firstPaginationPaneSequenceAttributionManager" layoutX="107.5" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#firstPaginationPaneSequenceAttributionManagerClick" prefHeight="40.0" prefWidth="95.0">
+                                 <children>
+                                    <Label id="firstPaginationLabelSequenceAttributionManager" fx:id="firstPaginationLabelSequenceAttributionManager" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="95.0" text="Premier">
+                                       <font>
+                                          <Font name="Verdana" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Button id="leftPaginationBtnSequenceAttributionManager" fx:id="leftPaginationBtnSequenceAttributionManager" focusTraversable="false" layoutX="222.5" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#leftPaginationBtnSequenceAttributionManagerClick" prefHeight="40.0" prefWidth="40.0">
+                                 <graphic>
+                                    <ImageView id="leftPaginationBtnSequenceAttributionManagerImage" fx:id="leftPaginationBtnSequenceAttributionManagerImage" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <image>
+                                          <Image url="@../../assets/leftArrow.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <TextField id="fieldPaginationSequenceAttributionManager" fx:id="fieldPaginationSequenceAttributionManager" layoutX="282.5" layoutY="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#fieldPaginationSequenceAttributionManagerKeyPressed" prefHeight="38.0" prefWidth="75.0">
+                                 <font>
+                                    <Font name="Verdana Bold" size="20.0" />
+                                 </font>
+                              </TextField>
+                              <Button id="rightPaginationBtnSequenceAttributionManager" fx:id="rightPaginationBtnSequenceAttributionManager" focusTraversable="false" layoutX="377.5" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#rightPaginationBtnSequenceAttributionManagerClick" prefHeight="40.0" prefWidth="40.0">
+                                 <graphic>
+                                    <ImageView id="rightPaginationBtnSequencesManagerImage" fx:id="rightPaginationBtnSequenceAttributionManagerImage" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <image>
+                                          <Image url="@../../assets/rightArrow.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Pane id="lastPaginationPaneSequenceAttributionManager" fx:id="lastPaginationPaneSequenceAttributionManager" layoutX="437.5" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#lastPaginationPaneSequenceAttributionManagerClick" prefHeight="40.0" prefWidth="95.0">
+                                 <children>
+                                    <Label id="lastPaginationLabelSequenceAttributionManager" fx:id="lastPaginationLabelSequenceAttributionManager" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="95.0" text="Dernier">
+                                       <font>
+                                          <Font name="Verdana" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane id="paneSequenceAttributionEdit" fx:id="paneSequenceAttributionEdit" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane id="corePaneSequenceAttributionEdit" fx:id="corePaneSequenceAttributionEdit" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="1280.0">
+               <children>
+                  <Button id="backBtnSequenceAttributionEdit" fx:id="backBtnSequenceAttributionEdit" focusTraversable="false" layoutX="15.0" layoutY="531.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#backBtnSequenceAttributionEditClick" prefHeight="70.0" prefWidth="70.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView id="backBtnSequenceAttributionEditImage" fx:id="backBtnSequenceAttributionEditImage" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../assets/leftArrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button id="saveBtnSequenceAttributionEdit" fx:id="saveBtnSequenceAttributionEdit" focusTraversable="false" layoutX="1196.0" layoutY="532.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#saveBtnSequenceAttributionEditClick" prefHeight="70.0" prefWidth="70.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <graphic>
+                        <ImageView id="saveBtnSequenceAttributionEditImage" fx:id="saveBtnSequenceAttributionEditImage" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../assets/save.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Pane id="internalPaneSequenceAttributionEdit" fx:id="internalPaneSequenceAttributionEdit" layoutX="160.0" layoutY="44.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="528.0" prefWidth="960.0">
+                     <children>
+                        <Pane id="titlePaneSequenceAttributionEdit" fx:id="titlePaneSequenceAttributionEdit" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="960.0">
+                           <children>
+                              <Label id="titleLabelSequenceAttributionEdit" fx:id="titleLabelSequenceAttributionEdit" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="960.0">
+                                 <font>
+                                    <Font name="Verdana Bold" size="35.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane id="subPaneSequenceAttributionEdit" fx:id="subPaneSequenceAttributionEdit" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="468.0" prefWidth="960.0">
+                           <children>
+                              <Pane id="layoutPaneSequenceAttributionEdit" fx:id="layoutPaneSequenceAttributionEdit" layoutX="10.0" layoutY="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="448.0" prefWidth="940.0">
+                                 <children>
+                                    <Pane id="internalPaneIndicatorSequenceAttributionEdit" fx:id="internalPaneIndicatorSequenceAttributionEdit" prefHeight="94.0" prefWidth="940.0">
+                                       <children>
+                                          <Button id="uncheckAllBtnSequenceAttributionEdit" fx:id="uncheckAllBtnSequenceAttributionEdit" focusTraversable="false" layoutX="14.0" layoutY="17.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#uncheckAllBtnSequenceAttributionEditClick" prefHeight="60.0" prefWidth="60.0">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <graphic>
+                                                <ImageView id="uncheckAllBtnSequenceAttributionEditImage" fx:id="uncheckAllBtnSequenceAttributionEditImage" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../assets/close.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Label id="labelUncheckSequenceAttributionEdit" fx:id="labelUncheckSequenceAttributionEdit" focusTraversable="false" layoutX="83.0" layoutY="28.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="240.0" style="-fx-alignment: center;" text="Tout décocher">
+                                             <font>
+                                                <Font name="Verdana Bold" size="30.0" />
+                                             </font>
+                                          </Label>
+                                          <Button id="checkAllBtnSequenceAttributionEdit" fx:id="checkAllBtnSequenceAttributionEdit" focusTraversable="false" layoutX="866.0" layoutY="17.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#checkAllBtnSequenceAttributionEditClick" prefHeight="60.0" prefWidth="60.0">
+                                             <cursor>
+                                                <Cursor fx:constant="HAND" />
+                                             </cursor>
+                                             <graphic>
+                                                <ImageView id="checkAllBtnSequenceAttributionEditImage" fx:id="checkAllBtnSequenceAttributionEditImage" fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@../../assets/check.png" />
+                                                   </image>
+                                                </ImageView>
+                                             </graphic>
+                                          </Button>
+                                          <Label id="labelCheckSequenceAttributionEdit" fx:id="labelCheckSequenceAttributionEdit" focusTraversable="false" layoutX="650.0" layoutY="28.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="199.0" style="-fx-alignment: center;" text="Tout cocher">
+                                             <font>
+                                                <Font name="Verdana Bold" size="30.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </Pane>
+                                    <Pane id="internalPaneScrollSequenceAttributionEdit" fx:id="internalPaneScrollSequenceAttributionEdit" layoutY="94.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="354.0" prefWidth="940.0" />
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane id="panePupilFollowSequenceSelection" fx:id="panePupilFollowSequenceSelection" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0">
+         <children>
+            <Pane id="corePanePupilFollowSequenceSelection" fx:id="corePanePupilFollowSequenceSelection" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="1280.0">
+               <children>
+                  <Button id="backBtnPupilFollowSequenceSelection" fx:id="backBtnPupilFollowSequenceSelection" focusTraversable="false" layoutX="15.0" layoutY="531.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#backBtnPupilFollowSequenceSelectionClick" prefHeight="70.0" prefWidth="70.0">
+                     <graphic>
+                        <ImageView id="backBtnPupilFollowSequenceSelectionImage" fx:id="backBtnPupilFollowSequenceSelectionImage" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <image>
+                              <Image url="@../../assets/leftArrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Pane id="subPanePupilFollowSequenceSelection" fx:id="subPanePupilFollowSequenceSelection" layoutX="320.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="586.0" prefWidth="640.0">
+                     <children>
+                        <Pane id="internalPaneOneOfPupilFollowSequenceSelection" fx:id="internalPaneOneOfPupilFollowSequenceSelection" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="78.0" prefWidth="640.0">
+                           <children>
+                              <Label id="labelResearchPupilFollowSequenceSelection" fx:id="labelResearchPupilFollowSequenceSelection" layoutX="10.0" layoutY="20.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="38.0" prefWidth="192.0" text="Rechercher">
+                                 <font>
+                                    <Font name="Verdana Bold" size="30.0" />
+                                 </font>
+                              </Label>
+                              <TextField id="fieldResearchPupilFollowSequenceSelection" fx:id="fieldResearchPupilFollowSequenceSelection" focusTraversable="false" layoutX="213.0" layoutY="20.0" prefHeight="38.0" prefWidth="415.0">
+                                 <font>
+                                    <Font name="Verdana" size="15.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                        </Pane>
+                        <Pane id="internalPaneTwoOfPupilFollowSequenceSelection" fx:id="internalPaneTwoOfPupilFollowSequenceSelection" layoutY="78.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="640.0" />
+                        <Pane id="internalPaneThreeOfPupilFollowSequenceSelection" fx:id="internalPaneThreeOfPupilFollowSequenceSelection" layoutY="536.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="640.0">
+                           <children>
+                              <Pane id="firstPaginationPanePupilFollowSequenceSelection" fx:id="firstPaginationPanePupilFollowSequenceSelection" layoutX="107.5" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#firstPaginationPanePupilFollowSequenceSelectionClick" prefHeight="40.0" prefWidth="95.0">
+                                 <children>
+                                    <Label id="firstPaginationLabelPupilFollowSequenceSelection" fx:id="firstPaginationLabelPupilFollowSequenceSelection" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="95.0" text="Premier">
+                                       <font>
+                                          <Font name="Verdana" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                              <Button id="leftPaginationBtnPupilFollowSequenceSelection" fx:id="leftPaginationBtnPupilFollowSequenceSelection" focusTraversable="false" layoutX="222.5" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#leftPaginationBtnPupilFollowSequenceSelectionClick" prefHeight="40.0" prefWidth="40.0">
+                                 <graphic>
+                                    <ImageView id="leftPaginationBtnPupilFollowSequenceSelectionImage" fx:id="leftPaginationBtnPupilFollowSequenceSelectionImage" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <image>
+                                          <Image url="@../../assets/leftArrow.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <TextField id="fieldPaginationPupilFollowSequenceSelection" fx:id="fieldPaginationPupilFollowSequenceSelection" layoutX="282.5" layoutY="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#fieldPaginationPupilFollowSequenceSelectionKeyPressed" prefHeight="38.0" prefWidth="75.0">
+                                 <font>
+                                    <Font name="Verdana Bold" size="20.0" />
+                                 </font>
+                              </TextField>
+                              <Button id="rightPaginationBtnPupilFollowSequenceSelection" fx:id="rightPaginationBtnPupilFollowSequenceSelection" focusTraversable="false" layoutX="377.5" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#rightPaginationBtnPupilFollowSequenceSelectionClick" prefHeight="40.0" prefWidth="40.0">
+                                 <graphic>
+                                    <ImageView id="rightPaginationBtnPupilFollowSequenceSelectionImage" fx:id="rightPaginationBtnPupilFollowSequenceSelectionImage" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <image>
+                                          <Image url="@../../assets/rightArrow.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <Pane id="lastPaginationPanePupilFollowSequenceSelection" fx:id="lastPaginationPanePupilFollowSequenceSelection" layoutX="437.5" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onMouseClicked="#lastPaginationPanePupilFollowSequenceSelectionClick" prefHeight="40.0" prefWidth="95.0">
+                                 <children>
+                                    <Label id="lastPaginationLabelPupilFollowSequenceSelection" fx:id="lastPaginationLabelPupilFollowSequenceSelection" alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="40.0" prefWidth="95.0" text="Dernier">
+                                       <font>
+                                          <Font name="Verdana" size="18.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </Pane>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+      <Pane id="panePupilFollowSequence" fx:id="panePupilFollowSequence" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" visible="false">
+         <children>
+            <Pane id="corePanePupilFollowSequence" fx:id="corePanePupilFollowSequence" layoutY="104.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="1280.0">
+               <children>
+                  <Button id="backBtnPupilFollowSequence" fx:id="backBtnPupilFollowSequence" focusTraversable="false" layoutX="15.0" layoutY="531.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#backBtnPupilFollowSequenceClick" prefHeight="70.0" prefWidth="70.0">
+                     <graphic>
+                        <ImageView id="backBtnPupilFollowSequenceImage" fx:id="backBtnPupilFollowSequenceImage" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <image>
+                              <Image url="@../../assets/leftArrow.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Button id="exportBtnPupilFollowSequence" fx:id="exportBtnPupilFollowSequence" focusTraversable="false" layoutX="1195.0" layoutY="531.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onAction="#exportBtnPupilFollowSequenceClick" prefHeight="70.0" prefWidth="70.0">
+                     <graphic>
+                        <ImageView id="exportBtnPupilFollowSequenceImage" fx:id="exportBtnPupilFollowSequenceImage" fitHeight="70.0" fitWidth="70.0" pickOnBounds="true">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <image>
+                              <Image url="@../../assets/import.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Pane id="subPanePupilFollowSequence" fx:id="subPanePupilFollowSequence" layoutX="130.0" layoutY="15.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="586.0" prefWidth="1020.0">
+                     <children>
+                        <Pane id="internalPaneOneOfPupilFollowSequence" fx:id="internalPaneOneOfPupilFollowSequence" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="78.0" prefWidth="1020.0">
+                           <children>
+                              <Label id="labelSequenceTitlePupilFollowSequence" fx:id="labelSequenceTitlePupilFollowSequence" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="78.0" prefWidth="1020.0" text="Titre de la séquence">
+                                 <font>
+                                    <Font name="Verdana Bold" size="40.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="15.0" />
+                                 </padding>
+                              </Label>
+                           </children>
+                        </Pane>
+                        <Pane id="internalPaneTwoOfPupilFollowSequence" fx:id="internalPaneTwoOfPupilFollowSequence" layoutY="78.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="458.0" prefWidth="1020.0">
+                           <children>
+                              <Pane id="paneExercisesInfoBarPupilFollowSequence" fx:id="paneExercisesInfoBarPupilFollowSequence" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="60.0" prefWidth="1020.0" />
+                              <Pane id="panePupilNotesPupilFollowSequence" fx:id="panePupilNotesPupilFollowSequence" layoutY="60.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="398.0" prefWidth="1020.0" />
+                           </children>
+                        </Pane>
+                        <Pane id="internalPaneThreeOfPupilFollowSequence" fx:id="internalPaneThreeOfPupilFollowSequence" layoutY="536.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="1020.0">
+                           <children>
+                              <Button id="leftPaginationBtnPupilFollowSequence" fx:id="leftPaginationBtnPupilFollowSequence" focusTraversable="false" layoutX="412.5" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0">
+                                 <graphic>
+                                    <ImageView id="leftPaginationBtnPupilFollowSequenceImage" fx:id="leftPaginationBtnPupilFollowSequenceImage" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <image>
+                                          <Image url="@../../assets/leftArrow.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                              <TextField id="fieldPaginationPupilFollowSequence" fx:id="fieldPaginationPupilFollowSequence" disable="true" focusTraversable="false" layoutX="472.5" layoutY="6.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#fieldPaginationPupilFollowSequenceKeyPressed" prefHeight="38.0" prefWidth="75.0">
+                                 <font>
+                                    <Font name="Verdana Bold" size="20.0" />
+                                 </font>
+                              </TextField>
+                              <Button id="rightPaginationBtnPupilFollowSequence" fx:id="rightPaginationBtnPupilFollowSequence" focusTraversable="false" layoutX="567.5" layoutY="5.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0">
+                                 <graphic>
+                                    <ImageView id="rightPaginationBtnPupilFollowSequenceImage" fx:id="rightPaginationBtnPupilFollowSequenceImage" fitHeight="40.0" fitWidth="40.0" pickOnBounds="true">
+                                       <viewport>
+                                          <Rectangle2D />
+                                       </viewport>
+                                       <image>
+                                          <Image url="@../../assets/rightArrow.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </Pane>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

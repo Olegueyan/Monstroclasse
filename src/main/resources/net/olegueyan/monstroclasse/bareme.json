@@ -1,0 +1,22 @@
+{
+  "check":
+  {
+    "note": 4,
+    "max_mistakes": 0
+  },
+  "three_star":
+  {
+    "note": 3,
+    "max_mistakes": 2
+  },
+  "two_star":
+  {
+    "note": 2,
+    "max_mistakes": 4
+  },
+  "one_star":
+  {
+    "note": 1,
+    "max_mistakes": 2147483647
+  }
+}

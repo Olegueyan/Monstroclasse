@@ -1,0 +1,28 @@
+.node-flat
+{
+    -fx-background-color: transparent;
+    -fx-background-radius: 0;
+    -fx-border-width: 0px;
+    -fx-border-radius: 0;
+}
+
+.node-flat.-transparent
+{
+
+}
+
+.node-flat.-transparent:hover
+{
+    -fx-background-color: rgba(0, 0, 0, 0.2); /* Couleur de fond avec effet de transparence réduit */
+}
+
+
+.node-flat.-handed
+{
+
+}
+
+.node-flat.-handed:hover
+{
+    -fx-cursor: hand;
+}

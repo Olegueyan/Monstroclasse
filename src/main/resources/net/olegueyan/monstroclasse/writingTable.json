@@ -1,0 +1,492 @@
+{
+  "writingTable":
+  [
+    {
+      "specs":
+      {
+        "scol": 2,
+        "tone": 1
+      },
+      "top": ["i"],
+      "bottom":
+      [
+        ["ie", "î", "is", "id", "il", "it", "ix", "y", "hi", "hie", "hy", "yg", "ï"],
+        ["ies", "ient", "", "ids", "ils", "its", "iz", "ys", "his", "hies", "ea"]
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 2,
+        "tone": 1
+      },
+      "top": ["u"],
+      "bottom":
+      [
+        ["ue", "us", "ut", "eu", "eue", "eû", "uë", "hu", "hue", "", "hut", "ul", "ût"],
+        ["ues", "uent", "uts", "eus", "eues", "ux", "uës", "", "hues", "huent", "", "huts", "uls", "û"]
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 2,
+        "tone": 1
+      },
+      "top": ["o"],
+      "bottom":
+      [
+        ["", "ot", "ôt", "op", "oc", "oo", "au", "ho", "oi", "u", "a", "ow", "ô"],
+        ["os", "ots", "ôts", "ops", "ocs", "", "", "oh", "hu", "û", "ha", "oa", "ods"]
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 2,
+        "tone": 1
+      },
+      "top": ["a"],
+      "bottom":
+      [
+        ["", "à", "â", "ah", "at", "ac", "act", "ach", "ap", "ars", "ha", "ât", "e"],
+        ["as", "", "", "", "ats", "acs", "acts", "achs", "aps", "az", "ao", "âts"]
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 2,
+        "tone": 1
+      },
+      "top": ["e"],
+      "bottom":
+      [
+        ["ai", "on", "ue"],
+        []
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 2,
+        "tone": 1
+      },
+      "top": ["é"],
+      "bottom":
+      [
+        ["ée", "", "", "", "et", "ed", "ef", "er", "ez", "e", "œ", "hé", "œ"],
+        ["ées", "és", "es", "éent", "ais", "eds", "efs", "ers", "he", "a", "ë", "ai", "ee"]
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 4,
+        "tone": 2
+      },
+      "top": ["en", "an"],
+      "bottom":
+      [
+        ["", "em", "end", "eng", "ent", "em", "hen", "e", "emps", "empt"],
+        ["ens", "", "ends", "engs", "ents", "", "", "", "", "empts"],
+        ["", "am", "and", "ang", "ant", "amp", "aon", "anc", "han", "ham", "aen"],
+        ["ans", "", "ands", "angs", "ants", "amps", "", "aons", "ancs"]
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 4,
+        "tone": 1
+      },
+      "top": ["è"],
+      "bottom":
+      [
+        ["ès", "ê", "e", "ect", "es", "est", "et", "êt"],
+        ["", "ë", "ei", "ects", "", "", "ets", "êts"],
+        ["he", "hè", "hai", "haie", "a", "ai", "aid", "aie", "ais", "aies", "aits", "aît", "ay"],
+        ["hê", "", "hait", "haies", "", "aî", "aids", "aies", "ait", "aient", "aix"]
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 2,
+        "tone": 1
+      },
+      "top": ["m"],
+      "bottom":
+      [
+        ["me", "", "", "mm", "mme", "", "m'"],
+        ["mes", "ment", "ms", "", "mmes", "mment"]
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 2,
+        "tone": 1
+      },
+      "top": ["r"],
+      "bottom":
+      [
+        ["re", "", "", "rr", "rre", "", "rt", "rc", "rd", "rf", "rg", "rh", "rrh"],
+        ["res", "rent", "rs", "", "rres", "rrent", "rts", "rcs", "rds", "rfs", "rgs", "rps", "rrhes"]
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 2,
+        "tone": 1
+      },
+      "top": ["n"],
+      "bottom":
+      [
+        ["ne", "", "", "nn", "nne", "", "n'", "mn", "mne"],
+        ["nes", "nent", "ns", "", "nnes", "nnent", "", "", "mnes", "mnent"]
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 2,
+        "tone": 1
+      },
+      "top": ["l"],
+      "bottom":
+      [
+        ["le", "", "", "ll", "lle", "", "l'"],
+        ["les", "lent", "ls", "", "lles", "llent"]
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 2,
+        "tone": 1
+      },
+      "top": ["p"],
+      "bottom":
+      [
+        ["pe", "", "", "pp", "ppe", "", "", "b"],
+        ["pes", "pent", "ps", "", "ppes", "ppent"]
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 2,
+        "tone": 1
+      },
+      "top": ["t"],
+      "bottom":
+      [
+        ["te", "", "", "tt", "tte", "th", "t'", "pt", "pte", "", "cht", "the", "tth"],
+        ["tes", "tent", "ts", "ttes", "ttent", "", "", "", "ptes", "ptent", "chts", "thes"]
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 2,
+        "tone": 1
+      },
+      "top": ["s"],
+      "bottom":
+      [
+        ["se", "", "", "ss", "sse", "sc", "s'", "sce", "c", "ç", "c'", "ce", "t", "x", "ls"],
+        ["ses", "sent", "", "sses", "ssent", "", "", "", "sces", "scent", "", "", "ces", "cent", "sth"]
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 2,
+        "tone": 1
+      },
+      "top": ["f"],
+      "bottom":
+      [
+        ["fe", "", "", "ff", "ffe", "", "", "ph", "phe", "", "v"],
+        ["fes", "fent", "fs", "", "ffes", "ffent", "", "", "phes", "phent"]
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 2,
+        "tone": 1
+      },
+      "top": ["d"],
+      "bottom":
+      [
+        ["de", "", "", "dd", "", "", "d'"],
+        ["des", "dent", "ds"]
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 2,
+        "tone": 1
+      },
+      "top": ["j"],
+      "bottom":
+      [
+        ["j'", "je", "", "g", "ge"],
+        ["", "", "", "", "ges", "gent"]
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 2,
+        "tone": 1
+      },
+      "top": ["on"],
+      "bottom":
+      [
+        ["", "onc", "ond", "ong", "ont", "", "om", "omb", "omp", "ompt", "un", "hon"],
+        ["ons", "oncs", "onds", "ongs", "onts", "ont", "", "ombs", "omps", "ompts"]
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 2,
+        "tone": 1
+      },
+      "top": ["au"],
+      "bottom":
+      [
+        ["aus", "eau", "o", "ô", "ot", "op", "ôt", "aud", "aut", "ho", "hau", "heau", "haut"],
+        ["aux", "eaux", "os", "", "ots", "ops", "ôts", "auds", "auts", "oh", "", "", "hauts"]
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 2,
+        "tone": 1
+      },
+      "top": ["ou"],
+      "bottom":
+      [
+        ["ous", "où", "oue", "u", "oub", "oup", "ouls", "ouc", "out", "oût", "houx", "août"],
+        ["oux", "oû", "oues", "ouent", "oubs", "oups", "oug", "oucs", "outs", "oûts", "oo", "hu", "eo"]
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 4,
+        "tone": 1
+      },
+      "top": ["in"],
+      "bottom":
+      [
+        ["", "ïn", "inc", "inct", "int", "inq", "ingt", "im", "hin", "hym", "hein", "yn", "ym"],
+        ["ins", "", "", "incts", "", "", "ingts", "", "", "", "", "", "yms"],
+        ["ain", "aim", "ainc", "aing", "aint", "en", "", "ein", "eint", "eing", "eint", "em"],
+        ["ains", "aims", "aincs", "aings", "", "aints", "ens", "", "eins", "eints", "eings", "", "eints"]
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 2,
+        "tone": 1
+      },
+      "top": ["un"],
+      "bottom":
+      [
+        ["", "um", "hun", "hum", "eun", "unt"],
+        ["uns", "ums", "huns", "", "", "unts"]
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 2,
+        "tone": 1
+      },
+      "top": ["eu"],
+      "bottom":
+      [
+        ["œu", "", "ue", "", "u"],
+        ["heu", "", "œ"]
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 2,
+        "tone": 1
+      },
+      "top": ["oi"],
+      "bottom":
+      [
+        ["", "oie", "oî", "oid", "oies", "oigt", "oit", "oît", "oix", "oua", "o", "a", "u"],
+        ["ois", "oies", "oîs", "oids", "oient", "oigts", "oits", "oîts", "hoi", "oe", "eoi"]
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 2,
+        "tone": 1
+      },
+      "top": ["oin"],
+      "bottom":
+      [
+        ["", "oing", "ouin", "oint", "ooing"],
+        ["oins", "oings", "", "ouins", "", "oints", "ooings", "gs"]
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 2,
+        "tone": 1
+      },
+      "top": ["eu"],
+      "bottom":
+      [
+        ["", "", "eue", "eur", "eut", "œu", "eû", "heu", "euh", "œud"],
+        ["eux", "eus", "eues", "eurs", "", "", "œufs", "", "", "œuds"]
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 2,
+        "tone": 1
+      },
+      "top": ["g"],
+      "bottom":
+      [
+        ["gue", "", "", "gu", "gh", "c", "gg", "gh"],
+        ["gues", "guent", "gs"]
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 2,
+        "tone": 1
+      },
+      "top": ["z"],
+      "bottom":
+      [
+        ["ze", "", "zz", "", "s", "se", "", "", "x"],
+        ["zes", "zent", "", "", "", "ses", "sent"]
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 2,
+        "tone": 1
+      },
+      "top": ["c"],
+      "bottom":
+      [
+        ["", "cc", "cqu", "cque", "", "ch", "ck", "cch", "q", "qu", "que", "k", "ke"],
+        ["cs", "", "", "cques", "cquent", "chs", "cks", "qu'", "", "", "ques", "quent", "x"]
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 2,
+        "tone": 1
+      },
+      "top": ["b"],
+      "bottom":
+      [
+        ["be", "", "", "bb"],
+        ["bes", "bent", "bs"]
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 2,
+        "tone": 1
+      },
+      "top": ["x"],
+      "bottom":
+      [
+        [],
+        []
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 2,
+        "tone": 1
+      },
+      "top": ["ch"],
+      "bottom":
+      [
+        ["che", "", "sh", "sch", "sc", "je"],
+        ["ches", "chent", "chs", "", "", "jes"]
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 2,
+        "tone": 1
+      },
+      "top": ["v"],
+      "bottom":
+      [
+        ["ve", "", "", "w", "f"],
+        ["ves", "vent"]
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 2,
+        "tone": 1
+      },
+      "top": ["x"],
+      "bottom":
+      [
+        ["xe", "", "", "cc"],
+        ["xes", "xent"]
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 2,
+        "tone": 1
+      },
+      "top": ["ill"],
+      "bottom":
+      [
+        ["ille", "", "illi", "l", "lle", "", "y", "ye", "", "hy", "ï"],
+        ["illes", "illent", "il", "ll", "lles", "llent", "yes", "yent"]
+      ]
+    },
+    {
+      "specs":
+      {
+        "scol": 2,
+        "tone": 1
+      },
+      "top": ["gn"],
+      "bottom":
+      [
+        ["gne", "", "", "gni", "ni", "", "ign"],
+        ["gnes", "gnent"]
+      ]
+    }
+  ]
+}
